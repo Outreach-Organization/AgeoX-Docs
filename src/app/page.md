@@ -1,112 +1,177 @@
 ---
-title: Getting started
+title: Getting Started
+nextjs:
+  metadata:
+    title: Getting Started
+    description: Introduction to the Geospatial and Machine Learning Project.
 ---
-
-Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
 
 {% quick-links %}
 
-{% quick-link title="Installation" icon="installation" href="/" description="Step-by-step guides to setting up your system and installing the library." /%}
+{% quick-link title="Installation" icon="installation" href="/docs/installation" description="Step-by-step guide to setting up your project and installing the needed dependencies." /%}
 
-{% quick-link title="Architecture guide" icon="presets" href="/" description="Learn how the internals work and contribute." /%}
+{% quick-link title="Concepts guide" icon="presets" href="docs/understanding-geospatial-science" description="Explore geospatial concepts, their applications, and their role in modern science." /%}
 
-{% quick-link title="Plugins" icon="plugins" href="/" description="Extend the library with third-party plugins or write your own." /%}
+{% quick-link title="Begin Project" icon="plugins" href="/docs/heatmap-generation" description="Jump right in, and begin your project! There are three sections to complete." /%}
 
-{% quick-link title="API reference" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
+{% quick-link title="Contributing" icon="theming" href="/docs/how-to-contribute" description="Contribute ideas, modules, and suggestions to improve our learning materials." /%}
 
 {% /quick-links %}
 
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste.
+---
+
+# Introduction
+
+Welcome to our Geospatial Science learning project! We have created this guide that will help you set up your learning environments, create heatmaps using QGIS and Python, and visualize sorghum research field trial data while developing data science and machine learning skills. We’ll walk you through how to build a predictive model for important plant traits (e.g., yield, seed protein content, and chlorophyll a fluorescence) using data from drones, field instruments, technicians, and climate records.
+
+You’ll also learn to track and interpret key metrics—such as preprocessing steps, hyperparameter tuning, and feature importance—by installing and using TensorBoard. By following these instructions, you’ll be prepared to analyze geospatial data and apply machine learning techniques to understand plant performance more effectively.
 
 ---
 
-## Quick start
+## What You Will Learn
 
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur.
-
-### Installing dependencies
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```shell
-npm install @tailwindlabs/cache-advance
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
-
-{% callout type="warning" title="Oh no! Something bad happened!" %}
-This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
-{% /callout %}
-
-### Configuring the library
-
-Sit commodi iste iure molestias qui amet voluptatem sed quaerat. Nostrum aut pariatur. Sint ipsa praesentium dolor error cumque velit tenetur quaerat exercitationem. Consequatur et cum atque mollitia qui quia necessitatibus.
-
-```js
-// cache-advance.config.js
-export default {
-  strategy: 'predictive',
-  engine: {
-    cpus: 12,
-    backups: ['./storage/cache.wtf'],
-  },
-}
-```
-
-Possimus saepe veritatis sint nobis et quam eos. Architecto consequatur odit perferendis fuga eveniet possimus rerum cumque. Ea deleniti voluptatum deserunt voluptatibus ut non iste. Provident nam asperiores vel laboriosam omnis ducimus enim nesciunt quaerat. Minus tempora cupiditate est quod.
+1. **Geospatial Concepts**: Understand the fundamentals of geospatial data, GIS systems, and their applications.
+2. **Data Preparation**: Learn how to clean, preprocess, and structure data for analysis.
+3. **Modeling and Predictions**: Implement and evaluate regression models to predict plant traits like yield or protein content.
+4. **Tool Proficiency**: Gain hands-on experience with tools like JupyterLab, Google Colab, and programming libraries in Python.
 
 {% callout title="You should know!" %}
-This is what a disclaimer message looks like. You might want to include inline `code` in it. Or maybe you’ll want to include a [link](/) in it. I don’t think we should get too carried away with other scenarios like lists or tables — that would be silly.
+Understanding geospatial concepts requires curiosity and patience. Don’t hesitate to revisit foundational topics if you feel stuck.
 {% /callout %}
 
 ---
 
-## Basic usage
+## Prerequisites
 
-Praesentium laudantium magni. Consequatur reiciendis aliquid nihil iusto ut in et. Quisquam ut et aliquid occaecati. Culpa veniam aut et voluptates amet perspiciatis. Qui exercitationem in qui. Vel qui dignissimos sit quae distinctio.
+Before starting this project, ensure you have access to the following:
 
-### Your first cache
+### Tools and Software
 
-Minima vel non iste debitis. Consequatur repudiandae et quod accusamus sit molestias consequatur aperiam. Et sequi ipsa eum voluptatibus ipsam. Et quisquam ut.
+- **Python (3.9 or higher)**: Programming language for coding the project.
+- **Google Colab or JupyterLab**: Platforms for running Python scripts and notebooks.
+- **Excel or CSV Editor**: To view and manage data files.
 
-Qui quae esse aspernatur fugit possimus. Quam sed molestiae temporibus. Eum perferendis dignissimos provident ea et. Et repudiandae quasi accusamus consequatur dolore nobis. Quia reiciendis necessitatibus a blanditiis iste quia. Ut quis et amet praesentium sapiente.
+### Required Libraries
 
-Atque eos laudantium. Optio odit aspernatur consequuntur corporis soluta quidem sunt aut doloribus. Laudantium assumenda commodi.
+You will need the following Python libraries:
 
-### Clearing the cache
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- openpyxl
 
-Vel aut velit sit dolor aut suscipit at veritatis voluptas. Laudantium tempore praesentium. Qui ut voluptatem.
+If you are unsure how to install these, don’t worry. Detailed setup instructions are provided in the specific sections for JupyterLab and Google Colab.
 
-Ea est autem fugiat velit esse a alias earum. Dolore non amet soluta eos libero est. Consequatur qui aliquam qui odit eligendi ut impedit illo dignissimos.
-
-Ut dolore qui aut nam. Natus temporibus nisi voluptatum labore est ex error vel officia. Vero repellendus ut. Suscipit voluptate et placeat. Eius quo corporis ab et consequatur quisquam. Nihil officia facere dolorem occaecati alias deleniti deleniti in.
-
-### Adding middleware
-
-Officia nobis tempora maiores id iusto magni reprehenderit velit. Quae dolores inventore molestiae perspiciatis aut. Quis sequi officia quasi rem officiis officiis. Nesciunt ut cupiditate. Sunt aliquid explicabo enim ipsa eum recusandae. Vitae sunt eligendi et non beatae minima aut.
-
-Harum perferendis aut qui quibusdam tempore laboriosam voluptatum qui sed. Amet error amet totam exercitationem aut corporis accusantium dolorum. Perspiciatis aut animi et. Sed unde error ut aut rerum.
-
-Ut quo libero aperiam mollitia est repudiandae quaerat corrupti explicabo. Voluptas accusantium sed et doloribus voluptatem fugiat a mollitia. Numquam est magnam dolorem asperiores fugiat. Soluta et fuga amet alias temporibus quasi velit. Laudantium voluptatum perspiciatis doloribus quasi facere. Eveniet deleniti veniam et quia veritatis minus veniam perspiciatis.
+{% callout type="warning" title="Watch Out!" %}
+Ensure all required libraries are installed before proceeding. Missing dependencies can cause errors that are often hard to debug.
+{% /callout %}
 
 ---
 
-## Getting help
+## Project Overview
 
-Consequuntur et aut quisquam et qui consequatur eligendi. Necessitatibus dolorem sit. Excepturi cumque quibusdam soluta ullam rerum voluptatibus. Porro illo sequi consequatur nisi numquam nisi autem. Ut necessitatibus aut. Veniam ipsa voluptatem sed.
+This project focuses on:
 
-### Submit an issue
+- **Setting up your environment** for data analysis, creating heatmaps with QGIS and Python, and visualizing sorghum field trial data.
+- **Developing a predictive model** to estimate plant traits—such as yield, protein content, or chlorophyll fluorescence—using data from drones, field instruments, technicians, and climate records.
+- **Installing and using TensorBoard** to log, track, and visualize various metrics (e.g., preprocessing steps, hyperparameter tuning, and feature importance) throughout the modeling process.
 
-Inventore et aut minus ut voluptatem nihil commodi doloribus consequatur. Facilis perferendis nihil sit aut aspernatur iure ut dolores et. Aspernatur odit dignissimos. Aut qui est sint sint.
+### Data Sources
 
-Facere aliquam qui. Dolorem officia ipsam adipisci qui molestiae. Error voluptatem reprehenderit ex.
+You will work with:
 
-Consequatur enim quia maiores aperiam et ipsum dicta. Quam ut sit facere sit quae. Eligendi veritatis aut ut veritatis iste ut adipisci illo.
+- Wireless sensor data
+- Climate data
+- Field technician observations
+- Crop data
 
-### Join the community
+### Models
 
-Praesentium facilis iste aliquid quo quia a excepturi. Fuga reprehenderit illo sequi voluptatem voluptatem omnis. Id quia consequatur rerum consectetur eligendi et omnis. Voluptates iusto labore possimus provident praesentium id vel harum quisquam. Voluptatem provident corrupti.
+The project includes six pre-implemented regression models:
 
-Eum et ut. Qui facilis est ipsa. Non facere quia sequi commodi autem. Dicta autem sit sequi omnis impedit. Eligendi amet dolorum magnam repudiandae in a.
+- Partial Least Squares Regression (PLS)
+- Lasso Regression
+- ElasticNet Regression
+- Bayesian Ridge Regression
+- Extreme Gradient Boosting (XGBoost)
+- Support Vector Regression (SVR)
 
-Molestiae iusto ut exercitationem dolorem unde iusto tempora atque nihil. Voluptatem velit facere laboriosam nobis ea. Consequatur rerum velit ipsum ipsam. Et qui saepe consequatur minima laborum tempore voluptatum et. Quia eveniet eaque sequi consequatur nihil eos.
+You are encouraged to explore these models and even implement your own, such as Random Forest or Linear Regression.
+
+---
+
+## Quick Start
+
+Already familiar with development environments like Google Colab and JupyterLab? Great! Use the exercises below to refresh your skills and get hands-on practice with these tools. These mini-tasks will help you set up your environment and ensure everything is ready for the project.
+
+### Google Colab
+
+1. Open [Google Colab](https://colab.research.google.com).
+2. Install required libraries using:
+   ```python
+   !pip install pandas numpy scikit-learn matplotlib openpyxl
+   ```
+3. Upload your dataset and start coding!
+
+### JupyterLab
+
+1. Install JupyterLab using:
+   ```bash
+   pip install jupyterlab
+   ```
+2. Set up your environment by installing the required libraries:
+   ```bash
+   pip install pandas numpy scikit-learn matplotlib openpyxl
+   ```
+3. Open JupyterLab and create a new notebook for the project.
+
+{% callout title="You should know!" %}
+Google Colab is a cloud-based platform, so you don’t need to worry about local installations. It’s perfect for beginners!
+{% /callout %}
+
+---
+
+<!-- ## Data Preparation Guidelines
+
+1. Discard irrelevant columns such as `PlotID`, `Genotype`, and `Management`.
+2. Keep the `Year` column to split the data into training (2023) and testing (2024).
+3. Select a target trait (e.g., `Yield`) and use other traits as features.
+4. Replace `target_trait` in the provided code with the name of your chosen trait.
+
+{% callout type="warning" title="Common Mistake" %}
+Forgetting to replace `target_trait` in your code can lead to unexpected errors during model training. Double-check your work!
+{% /callout %}
+
+--- -->
+
+## Tips for Success
+
+- **Read the Instructions**: Carefully follow the guides for setting up and running the code.
+- **Stay Organized**: Keep your data, scripts, and results in a well-structured directory.
+- **Experiment**: Don’t hesitate to tweak model parameters and explore alternative approaches.
+- **Ask for Help**: Reach out to your instructor or peers if you encounter challenges.
+
+---
+
+## Getting Help
+
+If you encounter challenges or have questions, there are several resources to support you:
+
+- **Ask Your Instructor**: Your teacher is there to help clarify instructions and troubleshoot issues.
+- **Google It**: Use search engines to look up terms or code that you find challenging.
+- **Review Documentation**: Refer to this guide or library-specific documentation for deeper insights.
+
+{% callout title="You should know!" %}
+Learning is a process. Asking for help and using resources effectively are important parts of that process!
+{% /callout %}
+
+---
+
+## Submitting an Issue
+
+If you find an issue with the project or need further assistance, feel free to reach out to the lab directly:
+
+- Email: [shakoorlab.danforth@gmail.com](mailto:shakoorlab.danforth@gmail.com)
+
+We appreciate your feedback and will do our best to assist you promptly!

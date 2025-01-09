@@ -23,10 +23,10 @@ const lexend = localFont({
 export const metadata = {
   title: {
     template: '%s - Docs',
-    default: 'CacheAdvance - Never miss the cache again.',
+    default: 'AgGeoX - Sorghum, Sensors, Science.',
   },
   description:
-    'Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.',
+    'Dive into a hands-on research experience to uncover the optimal planting conditions for sorghum using geospatial technology, climate data, and predictive modeling.',
 }
 
 export default function RootLayout({ children }) {
