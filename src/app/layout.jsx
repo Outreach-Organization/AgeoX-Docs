@@ -26,7 +26,7 @@ export const metadata = {
     default: 'AgGeoX - Sorghum, Sensors, Science.',
   },
   description:
-    'Dive into a hands-on research experience to uncover the optimal planting conditions for sorghum using geospatial technology, climate data, and predictive modeling.',
+    'Dive into a hands-on research experience on learning how to predict crop traits for sorghum using geospatial technology, climate data, and predictive modeling.',
 }
 
 export default function RootLayout({ children }) {
