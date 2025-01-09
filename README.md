@@ -1,6 +1,6 @@
 # Geospatial and Machine Learning Project
 
-Welcome to the **Geospatial and Machine Learning Project** repository! This project is designed to provide hands-on experience in geospatial analysis and machine learning, enabling users to predict important plant traits using advanced technologies and tools.
+Welcome to the **AgGeox Learning** repository! This project is designed to provide hands-on experience in geospatial analysis and machine learning, enabling users to predict important plant traits using advanced technologies and tools.
 
 ---
 
