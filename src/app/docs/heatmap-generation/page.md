@@ -53,7 +53,7 @@ This guide will walk you through setting up your environment, creating heatmaps 
    - Open a command line application (e.g., Command Prompt or PowerShell).
    - Navigate to the folder containing `env_setup.yml`:
      ```bash
-     cd C:\Path\To\env_setup.yml
+     cd C:\Path\To\Folder\Containing\YML\
      ```
 
 2. **Mac/Linux Users:**
@@ -61,7 +61,7 @@ This guide will walk you through setting up your environment, creating heatmaps 
    - Open a terminal application (e.g., iTerm or Terminal).
    - Navigate to the folder containing `env_setup.yml`:
      ```bash
-     cd /Path/To/env_setup.yml
+     cd \Path\To\Folder\Containing\YML\
      ```
 
 ### Activating your environment
