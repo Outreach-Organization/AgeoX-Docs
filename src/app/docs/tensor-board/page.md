@@ -14,7 +14,7 @@ The goal of this task is to design and implement an educational framework that e
 
 ## Before You Begin
 
-In this section, you will be revisiting code that you and your team utilized in sections [**one**](/docs/heatmap-generation) and [**two**](/docs/machine-learning) . The idea now is that you will be using a framework called TensorBoard. This framework employs a novel, visualization-driven approach to provide real-time insights into key ML processes such as data preparation, model training, feature selection, and prediction evaluation. By integrating interactive visualization tools, this task aims to bridge the gap between theoretical knowledge and practical application, making the complex ML processes that you have already seen, more intuitive and engaging.
+In this section, you will be revisiting code that you and your team utilized in sections [**one**](/docs/heatmap-generation) and [**two**](/docs/machine-learning) . The idea now is that you will be using a framework called TensorBoard. This framework employs a novel, visualization-driven approach to provide real-time insights into key ML processes such as data preparation, model training, feature selection, and prediction evaluation. By integrating interactive visualization tools, this task aims to bridge the gap between theoretical knowledge and practical application, making the complex ML processes that you have already seen more intuitive and engaging.
 
 To download the files needed for the section, please see below:
 
@@ -31,12 +31,12 @@ Remember to update your file paths in these new files! If you do not update the 
 
 ---
 
-Utilizing TensorBoard with the previous sections code that we have worked with already, will help you to visualize critical aspects of ML, including loss curves, accuracy metrics, feature importance, and geospatial heatmaps. This will help enable you to understand how models learn and perform.
+Utilizing TensorBoard with code from sections one and two will help you to visualize critical aspects of ML, including loss curves, accuracy metrics, feature importance, and geospatial heatmaps. This will help enable you to understand how models learn and perform.
 
-Feel free to rerun the previous sections codes, now with the addition of the TensorBoard framework, and see what changes you notice, and what new insights are provided.
+Feel free to rerun the previous sections codes, now with the addition of the TensorBoard framework, and see what changes you notice. Are any new insights provided?
 
 {% callout title="You should know!" %}
-The set of instructions that you see below is if you were to set up your _own_ TensorBoard project. You can find the completed code that has the addition of TensorBoard here in [section three](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3). Run the codes in your development environment to see new results!
+The set of instructions that you see below are to be used if you wish to set up your _own_ TensorBoard project. You can find the completed code that has the addition of TensorBoard here in [section three](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3). Run the codes in your development environment to see new results!
 {% /callout %}
 
 ---

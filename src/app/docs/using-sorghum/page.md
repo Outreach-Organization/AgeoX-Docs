@@ -8,7 +8,7 @@ nextjs:
 
 ## Sorghum's Involvement
 
-The data used in this project originates from our research field trials focused on sorghum. These trials examine sorghum's phenotypic and genotypic traits, providing valuable insights for your analysis. Sorghum is not only a critical crop for food security and sustainability but also a powerful tool for carbon sequestration, making it a key player in combating climate change while supporting sustainable agricultural practices.
+The data used in this project originates from our research field trials focused on sorghum. These trials examine sorghum's phenotypic and genotypic traits, providing valuable insights for your analysis. Sorghum is not only a critical crop for food security and sustainability, but also a powerful tool for carbon sequestration, making it a key player in combating climate change while supporting sustainable agricultural practices.
 
 ---
 
