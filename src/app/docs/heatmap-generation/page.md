@@ -18,7 +18,7 @@ This guide will walk you through setting up your environment, creating heatmaps 
 
 ### Download Project Files
 
-- Access the project files here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
+- Before you begin, download the project files located here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
 - Create a folder in a location you’ll remember and place all downloaded files, including the **Shapefile folder** (`plot_boundaries` files), in it.
 
 ---
@@ -50,7 +50,8 @@ This guide will walk you through setting up your environment, creating heatmaps 
    Remember, this file was downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
    {% /callout %}
 
-   - Open a command line application (e.g., Command Prompt or PowerShell).
+   - Create a new folder and place the `env_setup.yml` file in it.
+   - Open the Anaconda command line application (Anaconda PowerShell).
    - Navigate to the folder containing `env_setup.yml`:
      ```bash
      cd C:\Path\To\Folder\Containing\YML\
@@ -68,11 +69,17 @@ This guide will walk you through setting up your environment, creating heatmaps 
 
 #### **Create and Activate Environment**
 
-1. Run the following command to create the environment:
+1. While in the same directory (_folder_) of your env_setup.yml file, run the following command to create the environment:
    ```bash
    conda env create -f env_setup.yml
    ```
 2. When the installation completes:
+
+   - Verify the environment was created:
+
+     ```bash
+     conda env list
+     ```
 
    - Activate the environment:
 
@@ -80,27 +87,50 @@ This guide will walk you through setting up your environment, creating heatmaps 
      conda activate geo_ml_env
      ```
 
-   - Verify the environment:
+   - View your environment's packages (that were installed using the _**env_setup.yml**_ file):
      ```bash
      conda list
      ```
 
-#### **Set Up Jupyter Lab**
+#### **Install and Setup VS Code**
 
-3. From the command line, run the following command to set up the Jupyter kernel:
+1. Visit the [Visual Studio Code](https://code.visualstudio.com/) webpage (if you have not done so already).
+
+{% callout type="warning" title="Watch Out!" %}
+Please do not get _Visual Studio Code_ and _Visual Studio_ confused when you go to download the program! (Confusing, we know!) They are each their own program. You are looking for Visual Studio _`Code`_.
+{% /callout %}
+
+2. Download the installer provided for your Operating System (_Mac/Windows_).
+
+3. After installing, launch VS Code.
+
+{% callout title="You should know!" %}
+Launching the application might take a moment as it is a big program. Do not worry if it takes a minute or more to open for you.
+{% /callout %}
+
+4. In your newly opened Visual Studio code window, navigate to the Extensions tab (View -> Extensions).
+
+5. Search for and install the following extensions:
 
    ```bash
-   python -m ipykernel install --user
-   --name=geo_ml_env --display-name "Python (geo_ml_env)
+   'Python'
+   'Jupyter'
    ```
 
-4. Launch Jupyter Lab by typing the following command in your terminal:
-
+6. You should now have the following in your Extensions list under 'Installed':
    ```bash
-   jupyter lab
+   'Jupyter Slide Show'
+   'Jupyter Notebook Renderers'
+   'Jupyter Keymap'
+   'Jupyter Cell Tags'
+   'Jupyter'
+   'Python Debugger'
+   'Python'
+   'Pylance'
    ```
-
-5. In the Jupyter Lab dashboard, under **Notebook**, select `Python 3 (geo_ml_env)`.
+   {% callout title="You should know!" %}
+   Navigating Visual Studio code for the first time can be tricky! If you need help with shortcuts, visit their documentation page, or visit their [Getting Started](https://code.visualstudio.com/docs/getstarted/keybindings) page.
+   {% /callout %}
 
 ## Making the Heatmap
 
@@ -108,28 +138,50 @@ This guide will walk you through setting up your environment, creating heatmaps 
 
 #### **Generate a Heatmap Using PyQGIS**
 
-1. With Jupyter Notebook running the `Python 3 (geo_ml_env)` kernel, open the `are_pyqgis.ipynb` notebook file.
+1. Within VS Code, select `File` -> `Open Folder` and navigate to your project folder created at the beginning of the instructions. Highlight the folder and click `Open`.
 
 {% callout title="You should know!" %}
-Remember, this file was downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
+Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
 {% /callout %}
 
-2. Provide values for the following string constants:
+2. Double-click the `are_pyqgis.ipynb` Python Notebook file in the VS Code Explorer on the left-hand side. If you do not see the Explorer, go to `View` -> `Explorer`.
 
-   - `CSV_IN`: Path to the `.csv` file.
-   - `SHP_IN`: Path to the `.shp` file. Ensure the `plot_boundaries.shp` file is in the same folder as the other `plot_boundaries` files.
-   - `PROJECT_OUT`: Output the path and filename for the generated QGIS project file (e.g., `/path/to/your/qgis_heatmap.qgs`).
+3. At top right, click `Select Kernel` -> `Python Environments` -> `geo_ml_env`.
 
-   {% callout type="warning" title="Important" %}
-   Make sure to include the `.qgs` extension when naming your output file.
+4. You will now want to provide for the string constants:
+
+   - `CSV_IN`: Path to the `field_sensor_data.csv` file.
+   - `SHP_IN`: Path to the `plot_boundaries.shp` file. Ensure this file is in the same folder as the other `plot_boundaries` files (_this is very important!_).
+   - `PROJECT_OUT`: Output the path and filename for the generated QGIS project file (e.g., `/path/to/your/qgis_heatmap.qgs`), making sure to include the `.qgs` extension on the filename.
+
+   {% callout type="warning" title="Important!" %}
+   You can right-click a file in the Explorer tab and choose `Copy Path` to get its file path, to use in the above step. Paste this into the quotes for each.
    {% /callout %}
 
-3. Specify the column/data name as a string for `label_name` to visualize as a heatmap.
+   Example:
 
-4. Run each cell in the notebook.
+   ```bash
+   CSV_IN = r"<paste_path_here>.
+   ```
+
+   If your file path is `C:\Code\field_sensor_data.csv` then your assignment will look like::
+
+   ```bash
+   CSV_IN = r"C:\Code\field_sensor_data.csv"`
+   ```
+
+5. Provide the column/data name (`label_name` string) for the data you wish to view as a heatmap.
+
+6. Run each cell (by pressing the `shift` + `enter` keys, or pressing the `play` button at the top of the editor).
+
+#### **Troubleshooting tips**
+
+1. If any files are `not found`, check your paths and try again. Use [absolute paths](https://www.redhat.com/en/blog/linux-path-absolute-relative) if necessary.
+
+2. If the kernel crashes, hit `Restart` and run again.
 
 {% callout title="You should know!" %}
-It is common for virtual environments (like the one you are using) to sometimes crash. No need to panic! If the kernel crashes, hit "_Restart_" and run again.
+It is common for virtual environments (like the one you are using) to sometimes crash. No need to panic!
 {% /callout %}
 
 ### Heatmap View
