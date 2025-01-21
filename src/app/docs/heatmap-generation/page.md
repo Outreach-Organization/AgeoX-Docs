@@ -108,7 +108,7 @@ Please do not get _Visual Studio Code_ and _Visual Studio_ confused when you go 
 Launching the application might take a moment as it is a big program. Do not worry if it takes a minute or more to open for you.
 {% /callout %}
 
-4. In your newly opened Visual Studio code window, navigate to the Extensions tab (View -> Extensions).
+4. In your newly opened Visual Studio code window, navigate to the Extensions tab (`View` -> `Extensions`).
 
 5. Search for and install the following extensions:
 
@@ -117,7 +117,7 @@ Launching the application might take a moment as it is a big program. Do not wor
    'Jupyter'
    ```
 
-6. You should now have the following in your Extensions list under 'Installed':
+6. You should now have the following in your Extensions list under `Installed`:
    ```bash
    'Jupyter Slide Show'
    'Jupyter Notebook Renderers'
