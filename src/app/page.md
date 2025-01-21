@@ -48,6 +48,7 @@ Before starting this project, ensure you have access to the following:
 ### Tools and Software
 
 - **Python (3.9 or higher)**: Programming language for coding the project.
+- **Visual Studio Code**: This is a popular IDE, or _Integrated Development Environment_, used for running code.
 - **Google Colab or JupyterLab**: Platforms for running Python scripts and notebooks.
 - **Excel or CSV Editor**: To view and manage data files.
 
