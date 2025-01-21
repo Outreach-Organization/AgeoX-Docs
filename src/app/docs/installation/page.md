@@ -22,6 +22,43 @@ This guide will walk you through the installation and setup process to ensure yo
 
 ---
 
+### Install Visual Studio Code
+
+1. Visit the [Visual Studio Code](https://code.visualstudio.com/) webpage (if you have not done so already).
+
+{% callout type="warning" title="Watch Out!" %}
+Please do not get _Visual Studio Code_ and _Visual Studio_ confused when you go to download the program! (Confusing, we know!) They are each their own program. You are looking for Visual Studio _`Code`_.
+{% /callout %}
+
+2. Download the installer provided for your Operating System (_Mac/Windows_).
+
+3. After installing, launch VS Code.
+
+{% callout title="You should know!" %}
+Launching the application might take a moment as it is a big program. Do not worry if it takes a minute or more to open for you.
+{% /callout %}
+
+4. In your newly opened Visual Studio code window, navigate to the Extensions tab (`View` -> `Extensions`).
+
+5. Search for and install the following extensions:
+
+   ```bash
+   'Python'
+   'Jupyter'
+   ```
+
+6. You should now have the following in your Extensions list under `Installed`:
+   ```bash
+   'Jupyter Slide Show'
+   'Jupyter Notebook Renderers'
+   'Jupyter Keymap'
+   'Jupyter Cell Tags'
+   'Jupyter'
+   'Python Debugger'
+   'Python'
+   'Pylance'
+   ```
+
 ## Installing Python and Necessary Tools
 
 ### Check Python Installation
@@ -29,7 +66,7 @@ This guide will walk you through the installation and setup process to ensure yo
 1. Open a terminal (Command Prompt for Windows, Terminal for macOS/Linux).
 2. Run:
    ```bash
-   python --version
+   python3 --version
    ```
    If Python 3.9 or higher is not installed, follow the steps below.
 
