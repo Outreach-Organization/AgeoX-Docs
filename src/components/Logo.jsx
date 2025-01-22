@@ -25,6 +25,7 @@ export function Logo(props) {
       <text
         x="44"
         y="29"
+        className="fill-black dark:fill-white"
         font-family="Motiva Sans Bold, sans-serif"
         fill="#e0e0e0"
         font-size="30px"
