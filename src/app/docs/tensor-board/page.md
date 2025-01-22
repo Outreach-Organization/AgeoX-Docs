@@ -36,16 +36,18 @@ Utilizing TensorBoard with code from sections one and two will help you to visua
 Feel free to rerun the previous sections codes, now with the addition of the TensorBoard framework, and see what changes you notice. Are any new insights provided?
 
 {% callout title="You should know!" %}
-The set of instructions that you see below are to be used if you wish to set up your _own_ TensorBoard project. You can find the completed code that has the addition of TensorBoard here in [section three](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3). Run the codes in your development environment to see new results!
+You can find the completed code that has the addition of TensorBoard here in [section three](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3). Run the codes in your development environment to see new results!
 {% /callout %}
 
 ---
 
-## Setting Up Your Project
+## Setting Up Your Own Project
 
-### Install TensorBoard and Jupyter TensorBoard
+### Explore Further with TensorBoard
 
-1. **Open your terminal or command prompt** (e.g., PowerShell on Windows, Terminal on macOS/Linux).
+- If you’d like to learn more and set up your own TensorBoard project, check out these official guides for [TensorFlow](https://www.tensorflow.org/tensorboard/get_started) and [PyTorch](https://pytorch.org/tutorials/recipes/recipes/tensorboard_with_pytorch.html). They will help you understand how to visualize your models’ performance, track metrics, and gain deeper insights during training.
+
+<!-- 1. **Open your terminal or command prompt** (e.g., PowerShell on Windows, Terminal on macOS/Linux).
 
 2. **Install the required packages** using pip:
    ```bash
@@ -334,4 +336,4 @@ The set of instructions that you see below are to be used if you wish to set up 
 - If you run into issues with permissions or path errors, double-check the directory you are writing to (e.g., **_C:\Users\YourName_** on Windows or **_/home/yourname_** on Linux).
   {% callout title="Good luck!" %}
   These steps should give you a solid foundation for logging and visualizing everything from raw data stats to complex model metrics, all in TensorBoard. Happy logging!
-  {% /callout %}
+  {% /callout %} -->
