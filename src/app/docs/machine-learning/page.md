@@ -38,7 +38,7 @@ You should already have Python (3.9+), Conda (or Miniconda), JupyterLab or Googl
 
 1. Ensure your dataset is in `.xlsx` format.
 2. **Discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Management`**, and **`Planting Date`**.
-3. **Select everything in your file**, while in the `Home` tab, find the dropdown for `Number` formatting, select `General`. Make sure it applied.
+3. **Select everything in your file**, while in the `Home` tab, find the dropdown for `Number` formatting, select `General`.
 4. **Keep the `Year` column** as numeric values (e.g., 2023, 2024), which will be crucial when splitting your data into training (2023) and testing (2024).
 
 ---
