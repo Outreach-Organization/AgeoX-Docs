@@ -38,6 +38,7 @@ export const navigation = [
       { title: 'QGIS and Python', href: '/docs/heatmap-generation' },
       { title: 'Machine learning', href: '/docs/machine-learning' },
       { title: 'TensorBoard', href: '/docs/tensor-board' },
+      { title: 'Competition', href: '/docs/competition' },
       // { title: 'Testing', href: '/docs/testing' },
       // { title: 'Compile-time caching', href: '/docs/compile-time-caching' },
       // {
