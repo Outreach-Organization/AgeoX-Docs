@@ -28,6 +28,12 @@ You’ll also learn to track and interpret key metrics—such as preprocessing s
 
 ---
 
+## Before You Begin
+
+Make sure that before you begin the lessons, you form teams of 2-4 people and inform you professor of your team name! The idea of the later half of the project is that there is a comptetion, in order to see who can produce a model with the highest accuracy. Good luck!
+
+---
+
 ## What You Will Learn
 
 1. **Geospatial Concepts**: Understand the fundamentals of geospatial data, GIS systems, and their applications.

@@ -30,6 +30,7 @@ This guide will walk you through setting up your environment, creating heatmaps 
 - Visit the [QGIS Download Page](https://qgis.org/download/) (if you have not done already).
 - Choose the **Long Term Release (3.34 LTR)** version.
 - Select your operating system (Windows, macOS, or Linux) and follow the installation instructions.
+- When QGIS is installed, be sure to have the program running before you continue in the _Heatmap Creation_ section.
 
 #### **Install Miniconda**
 
@@ -138,17 +139,19 @@ Launching the application might take a moment as it is a big program. Do not wor
 
 #### **Generate a Heatmap Using PyQGIS**
 
-1. Within VS Code, select `File` -> `Open Folder` and navigate to your project folder created at the beginning of the instructions. Highlight the folder and click `Open`.
+1. If it is not already, make sure that your QGIS software that you downloaded previously, is open and running!
+
+2. Now within VS Code, select `File` -> `Open Folder` and navigate to your project folder created at the beginning of the instructions. Highlight the folder and click `Open`.
 
 {% callout title="You should know!" %}
 Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
 {% /callout %}
 
-2. Double-click the `are_pyqgis.ipynb` Python Notebook file in the VS Code Explorer on the left-hand side. If you do not see the Explorer, go to `View` -> `Explorer`.
+3. Double-click the `are_pyqgis.ipynb` Python Notebook file in the VS Code Explorer on the left-hand side. If you do not see the Explorer, go to `View` -> `Explorer`.
 
-3. At top right, click `Select Kernel` -> `Python Environments` -> `geo_ml_env`.
+4. At top right, click `Select Kernel` -> `Python Environments` -> `geo_ml_env`.
 
-4. You will now want to provide for the string constants:
+5. You will now want to provide for the string constants:
 
    - `CSV_IN`: Path to the `field_sensor_data.csv` file.
    - `SHP_IN`: Path to the `plot_boundaries.shp` file. Ensure this file is in the same folder as the other `plot_boundaries` files (_this is very important!_).
@@ -170,9 +173,9 @@ Remember, the needed files were downloaded from the google drive folder previous
    CSV_IN = r"C:\Code\field_sensor_data.csv"`
    ```
 
-5. Provide the column/data name (`label_name` string) for the data you wish to view as a heatmap.
+6. Provide the column/data name (`label_name` string) for the data you wish to view as a heatmap.
 
-6. Run each cell (by pressing the `shift` + `enter` keys, or pressing the `play` button at the top of the editor).
+7. Run each cell (by pressing the `shift` + `enter` keys, or pressing the `play` button at the top of the editor).
 
 #### **Troubleshooting tips**
 
