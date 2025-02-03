@@ -62,13 +62,13 @@ Happy modeling!
 
 # 🏆 2025 Leaderboard 🏆
 
-| Rank | Team Name       | Score (R²) | Last Updated |
-| ---- | --------------- | ---------- | ------------ |
-| 1️⃣   | Team Alpha      | 0.92       | 2025-01-29   |
-| 2️⃣   | Data Wizards    | 0.89       | 2025-01-28   |
-| 3️⃣   | ML Mavericks    | 0.87       | 2025-01-28   |
-| 4️⃣   | Sorghum Squad   | 0.85       | 2025-01-27   |
-| 5️⃣   | The Overfitters | 0.80       | 2025-01-26   |
+| Rank | Team Name       | Score (R²) | Trait Predicted         | Last Updated |
+| ---- | --------------- | ---------- | ----------------------- | ------------ |
+| 1️⃣   | Team Alpha      | 0.92       | Yield                   | 2025-01-29   |
+| 2️⃣   | Data Wizards    | 0.89       | Protein Content         | 2025-01-28   |
+| 3️⃣   | ML Mavericks    | 0.87       | Chlorophyll Florencense | 2025-01-28   |
+| 4️⃣   | Sorghum Squad   | 0.85       | Amylose Content         | 2025-01-27   |
+| 5️⃣   | The Overfitters | 0.80       | Starch Content          | 2025-01-26   |
 
 _The leaderboard will be updated at the end of the semester with your scores_
 
