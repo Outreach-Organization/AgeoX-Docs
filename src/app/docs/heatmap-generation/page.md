@@ -32,107 +32,6 @@ This guide will walk you through setting up your environment, creating heatmaps 
 - Select your operating system (Windows, macOS, or Linux) and follow the installation instructions.
 - When QGIS is installed, be sure to have the program running before you continue in the _Heatmap Creation_ section.
 
-<!-- #### **Install Miniconda**
-
-- Visit the [Miniconda Installation Page](https://docs.anaconda.com/miniconda/install/) (if you have not done already).
-- Choose the version for your operating system (Windows or macOS/Linux) and follow the instructions.
-
---- -->
-
-<!-- ### Set Up Python and Dependencies
-
-#### **Create a Working Project Directory**
-
-1. **Windows Users:**
-
-   - Create a new folder and place the `env_setup.yml` file in it.
-
-   {% callout title="You should know!" %}
-   Remember, this file was downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
-   {% /callout %}
-
-   - Create a new folder and place the `env_setup.yml` file in it.
-   - Open the Anaconda command line application (Anaconda PowerShell).
-   - Navigate to the folder containing `env_setup.yml`:
-     ```bash
-     cd C:\Path\To\Folder\Containing\YML\
-     ```
-
-2. **Mac/Linux Users:**
-   - Create a new folder and place the `env_setup.yml` file in it.
-   - Open a terminal application (e.g., iTerm or Terminal).
-   - Navigate to the folder containing `env_setup.yml`:
-     ```bash
-     cd \Path\To\Folder\Containing\YML\
-     ```
-
-### Activating your environment
-
-#### **Create and Activate Environment**
-
-1. While in the same directory (_folder_) of your env_setup.yml file, run the following command to create the environment:
-   ```bash
-   conda env create -f env_setup.yml
-   ```
-2. When the installation completes:
-
-   - Verify the environment was created:
-
-     ```bash
-     conda env list
-     ```
-
-   - Activate the environment:
-
-     ```bash
-     conda activate geo_ml_env
-     ```
-
-   - View your environment's packages (that were installed using the _**env_setup.yml**_ file):
-     ```bash
-     conda list
-     ``` -->
-
-<!-- #### **Install and Setup VS Code**
-
-1. Visit the [Visual Studio Code](https://code.visualstudio.com/) webpage (if you have not done so already).
-
-{% callout type="warning" title="Watch Out!" %}
-Please do not get _Visual Studio Code_ and _Visual Studio_ confused when you go to download the program! (Confusing, we know!) They are each their own program. You are looking for Visual Studio _`Code`_.
-{% /callout %}
-
-2. Download the installer provided for your Operating System (_Mac/Windows_).
-
-3. After installing, launch VS Code.
-
-{% callout title="You should know!" %}
-Launching the application might take a moment as it is a big program. Do not worry if it takes a minute or more to open for you.
-{% /callout %}
-
-4. In your newly opened Visual Studio code window, navigate to the Extensions tab (`View` -> `Extensions`).
-
-5. Search for and install the following extensions:
-
-   ```bash
-   'Python'
-   'Jupyter'
-   ```
-
-6. You should now have the following in your Extensions list under `Installed`:
-   ```bash
-   'Jupyter Slide Show'
-   'Jupyter Notebook Renderers'
-   'Jupyter Keymap'
-   'Jupyter Cell Tags'
-   'Jupyter'
-   'Python Debugger'
-   'Python'
-   'Pylance'
-   ```
-   {% callout title="You should know!" %}
-   Navigating Visual Studio code for the first time can be tricky! If you need help with shortcuts, visit their documentation page, or visit their [Getting Started](https://code.visualstudio.com/docs/getstarted/keybindings) page.
-   {% /callout %} -->
-
 ## Making the Heatmap
 
 ### Heatmap creation
@@ -143,15 +42,15 @@ Launching the application might take a moment as it is a big program. Do not wor
 
 2. Select `Plugins` from the toolbar, and choose `Python Console` from the dropdown menu.
 
-   ![Finding the Plugins tab](/images/QGIS/QGIS1.png)
+   ![Finding the Plugins tab](/images/QGIS/QGIS1.webp)
 
 3. Within the Python Console, choose `Show Editor`.
 
-   ![Finding the Show Editor button](/images/QGIS/QGIS2.png)
+   ![Finding the Show Editor button](/images/QGIS/QGIS2.webp)
 
 4. Within the newly opened Python Editor, choose `Open Script...` and select the `are_pyqgis.py` script from the Project Files downloaded.
 
-   ![Finding the Open Script button](/images/QGIS/QGIS3.png)
+   ![Finding the Open Script button](/images/QGIS/QGIS3.webp)
 
 {% callout title="You should know!" %}
 Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
@@ -193,11 +92,11 @@ Remember, the needed files were downloaded from the google drive folder previous
 
 8. Click the `Run Script` at the top of the Python Editor to execute the script!
 
-   ![Finding the Run Script button](/images/QGIS/QGIS4.png)
+   ![Finding the Run Script button](/images/QGIS/QGIS4.webp)
 
 9. Awesome! If you have made it this far, you should now see the heatmap and plot outline appear in the QGIS view. The following is what a successful heatmap generation should look like:
 
-   ![Successfully Generated Heatmap image](/images/QGIS/heatmap.png)
+   ![Successfully Generated Heatmap image](/images/QGIS/heatmap_before_satellite_layer.webp)
 
 #### **Troubleshooting tips**
 
@@ -215,7 +114,7 @@ It is common for software applications (like the one you are using) to sometimes
 
 1. Add the Google Satellite layer by right-clicking `XYZ Tiles` located in the browser at left, and choose `New Connection...`.
 
-   ![Finding the XYZ Tiles tab, to then find the New Connection button](/images/QGIS/QGIS5.png)
+   ![Finding the XYZ Tiles tab, to then find the New Connection button](/images/QGIS/QGIS5.webp)
 
 2. Enter the following details:
 
@@ -223,15 +122,113 @@ It is common for software applications (like the one you are using) to sometimes
    - **URL**: `http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}`
    - Click **OK**.
 
-3. Under **XYZ Tiles**, find your newly created **Google Satellite** entry and drag-drop it into your `Layers` list.
+3. Under **XYZ Tiles**, find your newly created **Google Satellite** entry and drag-drop it into your `Layers` list. Rearrange the layers so that the **Google Satellite** layer is at the _very bottom_.
 
-   ![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS6.png)
+   ![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS6.webp)
 
-4. Rearrange the layers so that the **Google Satellite** layer is at the _very bottom_.
+4. You should now see your heatmap rendered with real imagery from the satellite view. Great job!
+
+![Successfully Generated Heatmap image](/images/QGIS/heatmap_after_satelitte_layer.webp)
 
 {% callout title="You should know!" %}
 If the heatmap is not visible, right-click the _Heatmap Layer_ and select `_Zoom to Layer(s)_`.
-![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS7.png)
+![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS7.webp)
 {% /callout %}
 
 And that is it! Congrats on successfully creating your first map using real data from our field trials, to visual it using heatmaps and QGIS!
+
+## Further Learning
+
+### Now You Know
+
+So you have generated your heatmap, now what? You are probably thinking, why was this important and how are heatmaps relevant? Lets find out...
+
+### Analyzing the heatmap
+
+In QGIS, a "layer" represents data that you include in your QGIS Project. The data can take various forms, such as **Raster** (image), **Vector** (points, lines, shapes), and **Mesh** (a grid of data points) layers. In this case, the Google Satellite Layer is a _tiled Raster layer_ which pulls its image data from Google satellite photos. The order of the layers determines the order that items are visually rendered to the screen, one on top of the other. You can think of the list of layers like a stack, where the layer at the bottom is placed first, and the layer at top is placed last.
+
+### Why Heatmaps are Important
+
+Heatmaps turn data into visual insights! A heatmap is a useful way to visualize the location and intensity (or density) of data points. Our heatmap uses a gradient of colors, ranging from low (Green) to high, (Red) which represents a normalized extent of values tied to the individual data points. In our case, the locations and value of the data points are derived from the location and output readings of the installed soil sensors. A very specific example to get the point across would be the following:
+
+Example:
+
+_You have moisture data from a field, collected from sensors scattered across the field. You are asked to map this moisture data, so the farmer knows where the most wet portions of his field are.
+After collecting your moisture data, analyzing it, and generating a heatmap, you see there is a large red section in the middle of your generated heatmap. You now would be able use your findings to show your farmer that he has a portion of his field that collects more water than the other parts of his field. You would now tell him to not plant a crop there that does not do well in standing water._
+
+Pretty cool huh!
+
+### How Heatmaps and Machine Learning Relates
+
+In the next section, you will be moving on to **Machine Learning**. Don't let the word scare you! We will break it down more soon. You might be wondering:
+
+"_Why is the soil sensor heatmap needed in relation to the Machine Learning section?_"
+
+The soil sensor heatmap is essential for both the analysis and interpretation of the Machine Learning (ML) models, as it visualizes spatial and temporal variability in key environmental variables, such as soil moisture, soil temperature, electrical conductivity, air temperature, humidity, pressure, and light, across the sorghum field. These sensor-derived factors significantly influence plant growth and trait expression, making them critical inputs for the ML models (e.g., PLS, XGB, etc.) used to predict sorghum traits. Incorporating this heatmap data enables the models to account for field-level heterogeneity and genotype-by-environment interactions, improving prediction accuracy and model robustness.
+
+Furthermore, interpreting the heatmaps helps assess the degree of environmental variation across field plots, offering insights into how well the models generalize under diverse conditions. This is an important consideration for reliable future predictions!
+
+## Learning Resources
+
+Want to learn more? Checkout the links below!
+
+- Check out this live example of drought throughout the United States being visualized using heatmaps:
+  [Drought Visualized](https://www.drought.gov/topics/soil-moisture)
+
+- If you want to see other types of heatmaps that can be generated, visit this website here: [A Complete Guide to Heatmaps](https://www.croptracker.com/blog/what-is-machine-learning-how-will-it-benefit-agriculture.html)
+
+- Please visit this source if you want to know more about interpreting heatmaps: [How to Interpret a Heatmap](https://mouseflow.com/blog/how-to-interpret-a-heatmap/)
+
+### Glossary
+
+**Identified Keywords**
+
+- Heatmap
+- QGIS
+- Python
+- Shapefile
+- CSV
+- Raster
+- Vector
+- Mesh
+- Layer
+- XYZ Tiles
+- Satellite Layer
+- Geospatial Data
+- Gradient
+- Data Points
+- Absolute Path
+
+---
+
+**Definitions**
+
+- **Heatmap**: A two-dimensional data visualization in which individual values are represented as colors. In this context, it shows spatial intensity or density of sensor measurements over a mapped area.
+
+- **QGIS**: An open-source Geographic Information System application used to view, edit, and analyze geospatial data. It provides tools (e.g., Plugins, Python Console) to generate maps and perform spatial analyses.
+
+- **Python**: A high-level programming language used here to script QGIS operations (via the Python Console) and automate heatmap creation from field sensor data.
+
+- **Shapefile**: A popular vector data format for geographic information system (GIS) software. A “Shapefile folder” typically contains several related files (.shp, .shx, .dbf, etc.) that together define map features such as plot boundaries.
+
+- **CSV**: Short for “Comma-Separated Values,” a plain-text file format where each line is a record and each field is separated by a comma. In this guide, `field_sensor_data.csv` holds tabular sensor readings and timestamps.
+
+- **Raster**: A grid‐based data layer in which each cell (pixel) holds a value—often used for imagery (satellite photos) or heat intensity. QGIS treats satellite imagery as a tiled Raster layer.
+
+- **Vector**: A GIS data type that represents features as points, lines, or polygons. For example, the `plot_boundaries.shp` shapefile is a Vector layer defining each plot’s polygon outline.
+
+- **Mesh**: A grid of data points connected in rows and columns, used to represent six-degree-of-freedom surfaces or 3D models. QGIS supports Mesh layers for advanced visualization (though this guide focuses on Raster and Vector).
+
+- **Layer**: A single dataset in QGIS (e.g., a Raster layer, a Vector layer, or a Mesh layer). Layers are stacked in order of rendering—bottom layers draw first, top layers draw last.
+
+- **XYZ Tiles**: A mechanism for adding web-based tiled imagery in QGIS. Each tile is requested by X, Y, and Z (zoom) coordinates from a remote server (e.g., Google Satellite).
+
+- **Satellite Layer**: A Raster layer sourced from satellite imagery (e.g., Google Satellite). It provides a real-world background, over which the heatmap is rendered.
+
+- **Geospatial Data**: Any data that is associated with specific geographic coordinates. In this guide, sensor readings are georeferenced by latitude/longitude and then visualized on a map.
+
+- **Gradient**: A color ramp (from low to high values) used in a heatmap. Commonly, green indicates low intensity and red indicates high intensity, representing normalized sensor values.
+
+- **Data Points**: Individual sensor measurements (e.g., soil moisture at a particular location and time). When plotted, each data point contributes to the overall heatmap density.
+
+- **Absolute Path**: The full file path from the root of the filesystem (e.g., `C:\Code\field_sensor_data.csv` or `/home/user/project/field_sensor_data.csv`). Using absolute paths ensures QGIS can locate files unambiguously.
