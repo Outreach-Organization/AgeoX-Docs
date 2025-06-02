@@ -32,14 +32,14 @@ This guide will walk you through setting up your environment, creating heatmaps 
 - Select your operating system (Windows, macOS, or Linux) and follow the installation instructions.
 - When QGIS is installed, be sure to have the program running before you continue in the _Heatmap Creation_ section.
 
-#### **Install Miniconda**
+<!-- #### **Install Miniconda**
 
 - Visit the [Miniconda Installation Page](https://docs.anaconda.com/miniconda/install/) (if you have not done already).
 - Choose the version for your operating system (Windows or macOS/Linux) and follow the instructions.
 
----
+--- -->
 
-### Set Up Python and Dependencies
+<!-- ### Set Up Python and Dependencies
 
 #### **Create a Working Project Directory**
 
@@ -91,9 +91,9 @@ This guide will walk you through setting up your environment, creating heatmaps 
    - View your environment's packages (that were installed using the _**env_setup.yml**_ file):
      ```bash
      conda list
-     ```
+     ``` -->
 
-#### **Install and Setup VS Code**
+<!-- #### **Install and Setup VS Code**
 
 1. Visit the [Visual Studio Code](https://code.visualstudio.com/) webpage (if you have not done so already).
 
@@ -131,27 +131,33 @@ Launching the application might take a moment as it is a big program. Do not wor
    ```
    {% callout title="You should know!" %}
    Navigating Visual Studio code for the first time can be tricky! If you need help with shortcuts, visit their documentation page, or visit their [Getting Started](https://code.visualstudio.com/docs/getstarted/keybindings) page.
-   {% /callout %}
+   {% /callout %} -->
 
 ## Making the Heatmap
 
 ### Heatmap creation
 
-#### **Generate a Heatmap Using PyQGIS**
+#### **Generate and View Heatmap Using QGIS**
 
 1. If it is not already, make sure that your QGIS software that you downloaded previously, is open and running!
 
-2. Now within VS Code, select `File` -> `Open Folder` and navigate to your project folder created at the beginning of the instructions. Highlight the folder and click `Open`.
+2. Select `Plugins` from the toolbar, and choose `Python Console` from the dropdown menu.
+
+   ![Finding the Plugins tab](/images/QGIS/QGIS1.png)
+
+3. Within the Python Console, choose `Show Editor`.
+
+   ![Finding the Show Editor button](/images/QGIS/QGIS2.png)
+
+4. Within the newly opened Python Editor, choose `Open Script...` and select the `are_pyqgis.py` script from the Project Files downloaded.
+
+   ![Finding the Open Script button](/images/QGIS/QGIS3.png)
 
 {% callout title="You should know!" %}
 Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
 {% /callout %}
 
-3. Double-click the `are_pyqgis.ipynb` Python Notebook file in the VS Code Explorer on the left-hand side. If you do not see the Explorer, go to `View` -> `Explorer`.
-
-4. At top right, click `Select Kernel` -> `Python Environments` -> `geo_ml_env`.
-
-5. You will now want to provide for the string constants:
+5. With the script opened, provide for string constants **_CSV_IN_**, **_SHP_IN_**, and **_PROJECT_OUT_** at lines 23, 24, and 25.
 
    - `CSV_IN`: Path to the `field_sensor_data.csv` file.
    - `SHP_IN`: Path to the `plot_boundaries.shp` file. Ensure this file is in the same folder as the other `plot_boundaries` files (_this is very important!_).
@@ -173,38 +179,59 @@ Remember, the needed files were downloaded from the google drive folder previous
    CSV_IN = r"C:\Code\field_sensor_data.csv"`
    ```
 
-6. Provide the column/data name (`label_name` string) for the data you wish to view as a heatmap.
+6. Provide `date_start` and `date_end` for the date range you wish to view ( _see the commented section beginning at line 27_ ).
 
-7. Run each cell (by pressing the `shift` + `enter` keys, or pressing the `play` button at the top of the editor).
+   - OPTIONALLY: Instead of a range, provide a list of dates at line 36 variable '**dates**'.
+
+   Example:
+
+   ```bash
+   dates = ["2023-08-03", "2023-08-05", "2023-08-07"]
+   ```
+
+7. Provide the column name for the `label_name` variable for the data you wish to view as a heatmap at line 39. This refers to the column/header names within the `field_sensor_data.csv` file.
+
+8. Click the `Run Script` at the top of the Python Editor to execute the script!
+
+   ![Finding the Run Script button](/images/QGIS/QGIS4.png)
+
+9. Awesome! If you have made it this far, you should now see the heatmap and plot outline appear in the QGIS view. The following is what a successful heatmap generation should look like:
+
+   ![Successfully Generated Heatmap image](/images/QGIS/heatmap.png)
 
 #### **Troubleshooting tips**
 
 1. If any files are `not found`, check your paths and try again. Use [absolute paths](https://www.redhat.com/en/blog/linux-path-absolute-relative) if necessary.
 
-2. If the kernel crashes, hit `Restart` and run again.
+2. If the software crashes, you may need to start from the beginning as sometimes progress does not save.
 
 {% callout title="You should know!" %}
-It is common for virtual environments (like the one you are using) to sometimes crash. No need to panic!
+It is common for software applications (like the one you are using) to sometimes crash. No need to panic!
 {% /callout %}
 
-### Heatmap View
+### Satellite Layer
 
-#### View Heatmap in QGIS
+#### Add Google Satellite Layer
 
-1. Launch QGIS and select **Project → Open** to load your `.qgs` file.
+1. Add the Google Satellite layer by right-clicking `XYZ Tiles` located in the browser at left, and choose `New Connection...`.
 
-2. Add the Google Satellite layer:
+   ![Finding the XYZ Tiles tab, to then find the New Connection button](/images/QGIS/QGIS5.png)
 
-   - Right-click **XYZ Tiles** in the browser pane (on the left) and select **New Connection**.
-   - Enter the following details:
-     - **Name**: Google Satellite
-     - **URL**: `http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}`
+2. Enter the following details:
+
+   - **Name**: Google Satellite
+   - **URL**: `http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}`
    - Click **OK**.
 
-3. Drag and drop the newly created **Google Satellite** entry under **XYZ Tiles** into your **Layers** list.
+3. Under **XYZ Tiles**, find your newly created **Google Satellite** entry and drag-drop it into your `Layers` list.
 
-4. Arrange the layers so that the **Google Satellite** layer is at the bottom.
+   ![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS6.png)
+
+4. Rearrange the layers so that the **Google Satellite** layer is at the _very bottom_.
 
 {% callout title="You should know!" %}
-If the heatmap is not visible, right-click the _Heatmap Layer_ and select _Zoom to Layer(s)_.
+If the heatmap is not visible, right-click the _Heatmap Layer_ and select `_Zoom to Layer(s)_`.
+![Dragging the Google Satellite tab to the Layers tab](/images/QGIS/QGIS7.png)
 {% /callout %}
+
+And that is it! Congrats on successfully creating your first map using real data from our field trials, to visual it using heatmaps and QGIS!
