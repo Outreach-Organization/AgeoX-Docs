@@ -10,7 +10,7 @@ nextjs:
 
 This guide will walk you through setting up your environment, creating heatmaps with QGIS and Python, and visualizing data from our sorghum research field trials. These instructions are designed to be accessible for high school students and will help you explore geospatial data and its applications.
 
-## <!-- ![Heatmap result image](./heatmap.png) -->
+![Heatmap result image](/images/QGIS/heatmap_after_satelitte_layer.webp)
 
 ---
 
@@ -69,13 +69,13 @@ Remember, the needed files were downloaded from the google drive folder previous
    Example:
 
    ```bash
-   CSV_IN = r"<paste_path_here>.
+   CSV_IN = r"<paste_path_here>"
    ```
 
-   If your file path is `C:\Code\field_sensor_data.csv` then your assignment will look like::
+   If your file path is `C:\Code\field_sensor_data.csv` then your assignment will look like:
 
    ```bash
-   CSV_IN = r"C:\Code\field_sensor_data.csv"`
+   CSV_IN = r"C:\Code\field_sensor_data.csv"
    ```
 
 6. Provide `date_start` and `date_end` for the date range you wish to view ( _see the commented section beginning at line 27_ ).
@@ -137,7 +137,7 @@ If the heatmap is not visible, right-click the _Heatmap Layer_ and select `_Zoom
 
 And that is it! Congrats on successfully creating your first map using real data from our field trials, to visual it using heatmaps and QGIS!
 
-## Further Learning
+## Learning Continued
 
 ### Now You Know
 
@@ -153,8 +153,8 @@ Heatmaps turn data into visual insights! A heatmap is a useful way to visualize 
 
 Example:
 
-_You have moisture data from a field, collected from sensors scattered across the field. You are asked to map this moisture data, so the farmer knows where the most wet portions of his field are.
-After collecting your moisture data, analyzing it, and generating a heatmap, you see there is a large red section in the middle of your generated heatmap. You now would be able use your findings to show your farmer that he has a portion of his field that collects more water than the other parts of his field. You would now tell him to not plant a crop there that does not do well in standing water._
+> You have moisture data from a field, collected from sensors scattered across the field. You are asked to map this moisture data, so the farmer knows where the most wet portions of his field are.
+> After collecting your moisture data, analyzing it, and generating a heatmap, you see there is a large red section in the middle of your generated heatmap. You now would be able use your findings to show your farmer that he has a portion of his field that collects more water than the other parts of his field. You would now tell him to not plant a crop there that does not do well in standing water.
 
 Pretty cool huh!
 
