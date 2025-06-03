@@ -8,9 +8,15 @@ nextjs:
 
 # Introduction
 
+To support our research, our team collects detailed data from the field. Our technicians use tools and machines to measure plant traits like height, biomass (how much plant material is produced), photosynthesis activity, soil characteristics, grain quality, and weather conditions such as temperature and rainfall. These measurements are recorded regularly throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what you will be analyzing for this project!
+
+![Lab member measuring the height of sorghum](/images/Machine_Learning/ML1.webp)
+
+The excel file `ARE_crop_data.xlsx` is organized with detailed crop data where each row corresponds to a specific plot entry. The columns filled in red represent elements related to the field design, such as Year, Plot ID, Genotype, Management Type (Mgmt), and Planting Date (PD)—providing structural and temporal context of the field trial. The columns filled in green represent potential target traits used for analysis, including phenotypic measurements like Plant Height (PH), Nutritional Content (e.g., LysP, SC, AMLS), and metabolite or digestibility indicators (e.g., MD_Lys, MD_CF). This color-coded structure allows for easy differentiation between experimental setup and measurable outcomes, which is essential for downstream analyses such as Machine Learning-based trait prediction or genotype-performance evaluation.
+
 The objective of this section is to develop a model to predict a plant trait (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain modeling and machine learning skills. Below are the instructions to help you accomplish these tasks.
 
----
+## ![A sorghum leaf being measured for its traits ](/images/Machine_Learning/ML2.webp)
 
 ## Before You Begin
 
@@ -97,3 +103,137 @@ When using the provided code, **replace** the placeholder `target_trait` with th
 3. If you have any issues with your environment, **refer back to the Installation Guide** or ask for assistance.
 
 Happy modeling!
+
+## Learning Continued
+
+### Now You Know
+
+At this point, you might be thinking, _"Alright, but what’s the point of all this? Why do we even bother with modeling and regression models in the first place?"_ We had the very same questions when we started out, so we took the time to reflect on our journey, pinpoint the most pressing questions we had, and put together clear, straightforward answers to help you make sense of it too!
+
+**What is Modeling?**
+Modeling is the process of creating a simplified version of real-world scenarios using mathematics and data. In science, we use models to understand patterns, make predictions, and test ideas without always needing to run experiments in real life.
+
+**What is a regression model?**
+A regression model is a type of statistical or machine learning model used to understand and quantify the relationship between one or more input variables (called independent variables or features) and a continuous output variable (called the dependent variable or target).
+
+**Why Use Models?**
+Imagine trying to predict crop yield, weather, or even how a disease spreads — it's too complex to guess! Modeling helps us:
+
+- Predict outcomes (like how a plant will grow based on soil or climate)
+- Save time and resources by running simulations
+- Understand hidden relationships between many factors (like sunlight, water, nutrients)
+
+**What was the Model Doing?**
+A model takes data from input features (e.g., plant height, leaf color, temperature) and learns from these data to predict an outcome — such as grain nutritional quality (amylose, protein or starch content). Behind the scenes, the model is doing lots of math to find patterns and make the best possible guesses.
+
+**How Do We Interpret the Model?**
+Once the model makes predictions, we compare the prediction data to actual data collected by the scientists in the field to see:
+
+- How close was the prediction to the field data? → Good model
+- How far off was it from the field data? → Maybe we need more data or a better model
+
+**How do we test the accuracy of Models?**
+
+**R²** _(Coefficient of determination R-squared)_ – Tells us how well the model fits the real data (0 indicates the model explains none of the variability whereas 1 indicates that all of the variability is explained by the model)
+
+**RMSE** _(Root Mean Squared Error)_ – Measures the average difference of the actual data points from the predicted values . A value of zero indicates a perfect fit, while higher values indicate more error and less precise predictions.
+
+**What are the predictors variables?**
+When you integrate diverse data as inputs in models, not all the variables will be relevant to the model to make good guesses. Then the most important variables or features are crucial information to understand which variable drives the model output, then next time you will not need to collect all the other data.
+
+{% callout title="Stop for a breath!" %}
+Take a minute to reflect on all of the information. We know it is a lot to take in at once! Machine Learning is not an easy concept, it takes a long time to understand well and become an expert at. If you are curious and eager to learn more, please see the links below to become an expert yourself!
+{% /callout %}
+
+## Learning Resources
+
+Want to learn more? Checkout these links here!
+
+- Please visit this source if you want to learn more about the different types of machine learning: [Five Machine Learning Types to Know](https://www.ibm.com/think/topics/machine-learning-types)
+
+- Find out here how others are using machine learning in agriculture!
+  [Machine Learning in Agriculture: Use
+  Cases and Applications](https://www.itransition.com/machine-learning/agriculture)
+
+- If you want to read more about how machine learning may benefit agriculture, visit this resource: [What is Machine Learning & How Will it Benefit Agriculture?](https://www.croptracker.com/blog/what-is-machine-learning-how-will-it-benefit-agriculture.html)
+
+### Glossary
+
+**Identified Keywords**
+
+- Model
+- Modeling
+- Learning models
+- Regression
+- Observed and predicted values
+- Prediction
+- Machine learning
+- Plant trait
+- Target trait
+- Input features
+- Trait prediction
+- Training a model
+- R2
+- RMSE
+- Adjusting model parameters
+- Model accuracy
+- Cross-validation
+- Grid search
+- Randomized search
+- Hyperparameter
+- Loss curves
+- Accuracy metrics
+- Feature importance
+
+---
+
+**Definitions**
+
+- **Model**: An abstract representation or mathematical function that maps input data to output predictions based on learned patterns from data.
+
+- **Modeling**: The process of creating and refining a model by selecting its form, structure, and parameters to best capture relationships in data.
+
+- **Learning models**: A category of models in which parameters are automatically inferred from data through algorithms, as opposed to being manually specified (e.g., linear regression, decision trees, neural networks).
+
+- **Regression**: A type of supervised learning task and statistical method focused on modeling the relationship between one or more input variables and a continuous output variable.
+
+- **Observed and predicted values**:
+
+  - **Observed values**: The actual, measured outcomes in the dataset (ground truth).
+  - **Predicted values**: The outputs generated by the model when given input features.
+
+- **Prediction**: The act of using a trained model to estimate the output (target) for new, unseen input data.
+
+- **Machine learning**: A field of computer science that develops algorithms and models which improve their performance on a task through experience (i.e., by learning from data).
+
+- **Plant trait**: A measurable characteristic of a plant (e.g., leaf area, height, biomass) used in biology or agronomy studies.
+
+- **Target trait**: The specific plant trait that a model is trained to predict (sometimes called the dependent variable).
+
+- **Input features**: The set of variables (independent variables) used by a model as inputs to predict the target trait (e.g., spectral indices, environmental measurements).
+
+- **Trait prediction**: The task of estimating a plant’s target trait value using a model and a set of input features.
+
+- **Training a model**: The process of feeding input–output pairs (features and observed target values) into a learning algorithm so that the model’s parameters are adjusted to minimize prediction error.
+
+- **R² (Coefficient of Determination)**: A metric that indicates the proportion of variance in the observed target values explained by the model; ranges from 0 to 1, with higher values indicating a better fit.
+
+- **RMSE (Root Mean Squared Error)**: A metric that quantifies the average magnitude of prediction errors by taking the square root of the average squared differences between observed and predicted values.
+
+- **Adjusting model parameters**: The act of modifying either model weights (in learning algorithms) or structural settings to improve performance; often refers to both training (learning weights) and tuning (hyperparameter selection).
+
+- **Model accuracy**: A general term for metrics that evaluate how well a model’s predictions match the true values; in regression contexts, this often involves R², RMSE, MAE, etc.
+
+- **Cross-validation**: A technique for assessing model performance by partitioning data into multiple subsets (folds), training on some folds, and validating on the remaining fold(s) to estimate how well the model generalizes.
+
+- **Grid search**: A systematic approach to hyperparameter tuning where a predefined set of hyperparameter values is exhaustively evaluated to find the combination that yields the best model performance.
+
+- **Randomized search**: An alternative hyperparameter tuning method that samples a fixed number of hyperparameter combinations at random from a specified distribution, often more efficient than grid search when the search space is large.
+
+- **Hyperparameter**: A configuration setting for a learning algorithm or model (e.g., learning rate, regularization strength, number of hidden layers) that is set before training begins and not learned directly from the data.
+
+- **Loss curves**: Plots showing how the model’s loss (error) changes over training iterations or epochs, used to diagnose underfitting, overfitting, and convergence behavior.
+
+- **Accuracy metrics**: Quantitative measures (e.g., R², RMSE, MAE for regression; accuracy, precision, recall for classification) that evaluate a model’s performance against ground truth.
+
+- **Feature importance**: A ranking or score indicating how much each input feature contributes to the model’s predictions, often computed using methods like permutation importance, tree-based importance scores, or SHAP values.
