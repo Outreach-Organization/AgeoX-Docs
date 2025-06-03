@@ -337,3 +337,5 @@ You can find the completed code that has the addition of TensorBoard here in [se
   {% callout title="Good luck!" %}
   These steps should give you a solid foundation for logging and visualizing everything from raw data stats to complex model metrics, all in TensorBoard. Happy logging!
   {% /callout %} -->
+
+## Glossary

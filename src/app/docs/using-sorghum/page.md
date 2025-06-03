@@ -14,7 +14,7 @@ At Shakoor Lab, we are working on a five-year project funded by the National Sor
 
 The main goal of our project is to learn how different sorghum varieties respond to these common farming systems used across the U.S. We want to figure out **which sorghum types perform best in each system—especially in terms of yield and overall production**. This information can help farmers choose the right variety for their land, which improves both economic outcomes and environmental sustainability. Sorghum is not only a food source for humans and animals, but it is also used as a bioenergy crop, meaning it can help produce fuel from plants. Planting the right sorghum in the right conditions can strengthen the U.S. economy.
 
-The data used in this project originates from our research field trials focused on sorghum. These trials examine sorghum's phenotypic and genotypic traits, providing valuable insights for your analysis. Sorghum is not only a critical crop for food security and sustainability, but also **a powerful tool for carbon sequestration**, making it a key player in **combating climate change while supporting sustainable agricultural practices**.
+The data used in this project originates from our research field trials focused on sorghum. These trials examine sorghum's phenotypic traits, providing valuable insights for your analysis in this activity. Sorghum is not only a critical crop for food security and sustainability, but also **a powerful tool for carbon sequestration**, making it a key player in **combating climate change while supporting sustainable agricultural practices**.
 
 ![Shakoor lab field image](/images/Core_Concepts/Sorghum/Sorghum1.webp)
 
@@ -51,3 +51,7 @@ By studying sorghum, researchers can advance sustainable agriculture and address
 {% callout title="You Should Know!" %}
 Sorghum research isn’t just about improving crops—it’s about creating sustainable solutions for global food security and combating climate change through innovative practices.
 {% /callout %}
+
+---
+
+Congrats on completing the `Core Concepts` module, on what our lab and this activity is all about! When you are ready, please move on to the `Project` portion of the activity. You can begin the activity by clicking the **Next** arrow bottom of the page, or using the navigation on the left side of the page.

@@ -33,3 +33,7 @@ The transformative potential of geospatial research lies in its capacity to fost
 {% callout title="You Should Know!" %}
 Geospatial research has a direct impact on real-world decisions, from disaster relief to urban planning. Mastery of these tools makes you an asset in any field involving spatial data.
 {% /callout %}
+
+---
+
+Continue on to the third `Core Concepts` section to read about how Geospatial Science is used in Agriculture!

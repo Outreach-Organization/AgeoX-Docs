@@ -8,6 +8,8 @@ nextjs:
 
 # Introduction
 
+Welcome to the **Module Two** of the project!
+
 To support our research, our team collects detailed data from the field. Our technicians use tools and machines to measure plant traits like height, biomass (how much plant material is produced), photosynthesis activity, soil characteristics, grain quality, and weather conditions such as temperature and rainfall. These measurements are recorded regularly throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what you will be analyzing for this project!
 
 ![Lab member measuring the height of sorghum](/images/Machine_Learning/ML1.webp)
@@ -145,6 +147,8 @@ When you integrate diverse data as inputs in models, not all the variables will 
 Take a minute to reflect on all of the information. We know it is a lot to take in at once! Machine Learning is not an easy concept, it takes a long time to understand well and become an expert at. If you are curious and eager to learn more, please see the links below to become an expert yourself!
 {% /callout %}
 
+---
+
 ## Learning Resources
 
 Want to learn more? Checkout these links here!
@@ -157,7 +161,9 @@ Want to learn more? Checkout these links here!
 
 - If you want to read more about how machine learning may benefit agriculture, visit this resource: [What is Machine Learning & How Will it Benefit Agriculture?](https://www.croptracker.com/blog/what-is-machine-learning-how-will-it-benefit-agriculture.html)
 
-### Glossary
+---
+
+## Glossary
 
 **Identified Keywords**
 

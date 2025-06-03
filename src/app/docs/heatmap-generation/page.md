@@ -8,7 +8,9 @@ nextjs:
 
 # Heatmap Generation
 
-This guide will walk you through setting up your environment, creating heatmaps with QGIS and Python, and visualizing data from our sorghum research field trials. These instructions are designed to be accessible for high school students and will help you explore geospatial data and its applications.
+Welcome to the **Module One** of this project!
+
+This guide will walk you through setting up your environment, **creating heatmaps with QGIS and Python**, and **visualizing data** from our sorghum research field trials. These instructions are designed to be accessible for high school students and will help you explore geospatial data and its applications.
 
 ![Heatmap result image](/images/QGIS/heatmap_after_satelitte_layer.webp)
 
@@ -137,6 +139,8 @@ If the heatmap is not visible, right-click the _Heatmap Layer_ and select `_Zoom
 
 And that is it! Congrats on successfully creating your first map using real data from our field trials, to visual it using heatmaps and QGIS!
 
+---
+
 ## Learning Continued
 
 ### Now You Know
@@ -160,13 +164,15 @@ Pretty cool huh!
 
 ### How Heatmaps and Machine Learning Relates
 
-In the next section, you will be moving on to **Machine Learning**. Don't let the word scare you! We will break it down more soon. You might be wondering:
+In the next section, you will be moving on to **Machine Learning**. Don't let the word scare you! We will break it down more soon. You might be wondering..
 
-"_Why is the soil sensor heatmap needed in relation to the Machine Learning section?_"
+> How is the heatmap that we just created, important to the upcoming Machine Learning section?
 
 The soil sensor heatmap is essential for both the analysis and interpretation of the Machine Learning (ML) models, as it visualizes spatial and temporal variability in key environmental variables, such as soil moisture, soil temperature, electrical conductivity, air temperature, humidity, pressure, and light, across the sorghum field. These sensor-derived factors significantly influence plant growth and trait expression, making them critical inputs for the ML models (e.g., PLS, XGB, etc.) used to predict sorghum traits. Incorporating this heatmap data enables the models to account for field-level heterogeneity and genotype-by-environment interactions, improving prediction accuracy and model robustness.
 
 Furthermore, interpreting the heatmaps helps assess the degree of environmental variation across field plots, offering insights into how well the models generalize under diverse conditions. This is an important consideration for reliable future predictions!
+
+---
 
 ## Learning Resources
 
@@ -179,7 +185,9 @@ Want to learn more? Checkout the links below!
 
 - Please visit this source if you want to know more about interpreting heatmaps: [How to Interpret a Heatmap](https://mouseflow.com/blog/how-to-interpret-a-heatmap/)
 
-### Glossary
+---
+
+## Glossary
 
 **Identified Keywords**
 
