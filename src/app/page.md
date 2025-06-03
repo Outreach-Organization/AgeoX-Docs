@@ -22,27 +22,31 @@ nextjs:
 
 # Introduction
 
-Welcome to our Geospatial Science learning project! We have created this guide that will help you set up your learning environments, create heatmaps using QGIS and Python, and visualize sorghum research field trial data while developing data science and machine learning skills. We’ll walk you through how to build a predictive model for important plant traits (e.g., yield, seed protein content, and chlorophyll a fluorescence) using data from drones, field instruments, technicians, and climate records.
+Welcome to our Geospatial Science learning project! We have created this guide that will help students like you to set up your learning environments, create heatmaps using **QGIS** (_a geospatial data software_) and **Python** (_a popular programming language_), and visualize sorghum research field trial data while developing data science and **machine learning** skills. We’ll walk you through how to build a predictive model for important plant traits (e.g., yield, seed protein content, and chlorophyll a fluorescence) using data from drones, field instruments, technicians, and climate records.
 
-You’ll also learn to track and interpret key metrics—such as preprocessing steps, hyperparameter tuning, and feature importance—by installing and using TensorBoard. By following these instructions, you’ll be prepared to analyze geospatial data and apply machine learning techniques to understand plant performance more effectively.
+{% callout title="You should know!" %}
+Machine learning is a branch of artificial intelligence that enables computers to automatically learn patterns and make predictions or decisions from data without being explicitly programmed.
+{% /callout %}
+
+You’ll also learn to track and interpret metrics such as preprocessing steps, hyperparameter tuning, and feature importance, by installing and using the visualization tool **TensorBoard**. By following these instructions, you’ll be prepared to analyze geospatial data and apply machine learning techniques to understand plant performance more effectively.
 
 ---
 
 ## Before You Begin
 
-Make sure that before you begin the lessons, you form teams of 2-4 people and inform you professor of your team name! The idea of the later half of the project is that there is a comptetion, in order to see who can produce a model with the highest accuracy. Good luck!
+Make sure that before you begin the lessons, you form teams of 2-4 students and inform your educator of your team name! This is an important step because there is a competition at the end of the project to see who can produce a model with the highest accuracy. Good luck!
 
 ---
 
 ## What You Will Learn
 
-1. **Geospatial Concepts**: Understand the fundamentals of geospatial data, GIS systems, and their applications.
-2. **Data Preparation**: Learn how to clean, preprocess, and structure data for analysis.
-3. **Modeling and Predictions**: Implement and evaluate regression models to predict plant traits like yield or protein content.
+1. **Geospatial Concepts**: Understand the fundamentals of geospatial data, Geographic Information Systems (**GIS**), and their applications.
+2. **Data Preparation**: Learn how to clean and preprocess data for analysis.
+3. **Modeling and Predictions**: Using machine learning, implement and evaluate regression models to predict plant traits like yield or protein content.
 4. **Tool Proficiency**: Gain hands-on experience with tools like JupyterLab, Google Colab, and programming libraries in Python.
 
 {% callout title="You should know!" %}
-Understanding geospatial concepts requires curiosity and patience. Don’t hesitate to revisit foundational topics if you feel stuck.
+Understanding geospatial concepts requires curiosity and patience. Don’t hesitate to revisit fundamental topics if you feel stuck. Please reach out to our lab, or even visit popular code forums like [Stack Overflow](https://stackoverflow.com/questions) to have your questions answered in depth!
 {% /callout %}
 
 ---
@@ -54,7 +58,6 @@ Before starting this project, ensure you have access to the following:
 ### Tools and Software
 
 - **Python (3.9 or higher)**: Programming language for coding the project.
-- **Visual Studio Code**: This is a popular IDE, or _Integrated Development Environment_, used for running code.
 - **Google Colab or JupyterLab**: Platforms for running Python scripts and notebooks.
 - **Excel or CSV Editor**: To view and manage data files.
 
@@ -138,19 +141,6 @@ Google Colab is a cloud-based platform, so you don’t need to worry about local
 {% /callout %}
 
 ---
-
-<!-- ## Data Preparation Guidelines
-
-1. Discard irrelevant columns such as `PlotID`, `Genotype`, and `Management`.
-2. Keep the `Year` column to split the data into training (2023) and testing (2024).
-3. Select a target trait (e.g., `Yield`) and use other traits as features.
-4. Replace `target_trait` in the provided code with the name of your chosen trait.
-
-{% callout type="warning" title="Common Mistake" %}
-Forgetting to replace `target_trait` in your code can lead to unexpected errors during model training. Double-check your work!
-{% /callout %}
-
---- -->
 
 ## Tips for Success
 
