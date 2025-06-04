@@ -8,7 +8,7 @@ nextjs:
 
 # Heatmap Generation
 
-Welcome to the **Module One** of this project!
+Welcome to **Module One** of this project!
 
 This guide will walk you through setting up your environment, **creating heatmaps with QGIS and Python**, and **visualizing data** from our sorghum research field trials. These instructions are designed to be accessible for high school students and will help you explore geospatial data and its applications.
 

@@ -8,7 +8,9 @@ nextjs:
 
 # Introduction
 
-The goal of this task is to design and implement an educational framework that enhances your understanding of machine learning (ML) concepts in the context of GIS-based crop trait analysis. The framework employs a novel, visualization-driven approach using TensorBoard to provide real-time insights into key ML processes such as data preparation, model training, feature selection, and prediction evaluation. By integrating interactive visualization tools, this task aims to bridge the gap between theoretical knowledge and practical application, making complex ML processes intuitive and engaging.
+Welcome to the **third and final module** of the project! You have done great so far!
+
+The goal of this final task is to design and implement an educational framework that enhances your understanding of machine learning (ML) concepts in the context of GIS-based crop trait analysis. The framework employs a novel, visualization-driven approach using TensorBoard to provide real-time insights into key ML processes such as data preparation, model training, feature selection, and prediction evaluation. By integrating interactive visualization tools, this task aims to bridge the gap between theoretical knowledge and practical application, making complex ML processes intuitive and engaging.
 
 ---
 

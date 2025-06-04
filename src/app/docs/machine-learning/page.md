@@ -8,21 +8,25 @@ nextjs:
 
 # Introduction
 
-Welcome to the **Module Two** of the project!
+Welcome to **Module Two** of the project!
 
-To support our research, our team collects detailed data from the field. Our technicians use tools and machines to measure plant traits like height, biomass (how much plant material is produced), photosynthesis activity, soil characteristics, grain quality, and weather conditions such as temperature and rainfall. These measurements are recorded regularly throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what you will be analyzing for this project!
+To support our research, our team collects detailed data from the field. Our technicians use tools and machines to measure plant traits like **height**, **biomass** (how much plant material is produced), **photosynthesis activity**, **soil characteristics**, **grain quality**, and **weather conditions** such as temperature and rainfall. These measurements are **recorded regularly** throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what **you will be analyzing for this project!**
 
 ![Lab member measuring the height of sorghum](/images/Machine_Learning/ML1.webp)
 
-The excel file `ARE_crop_data.xlsx` is organized with detailed crop data where each row corresponds to a specific plot entry. The columns filled in red represent elements related to the field design, such as Year, Plot ID, Genotype, Management Type (Mgmt), and Planting Date (PD)—providing structural and temporal context of the field trial. The columns filled in green represent potential target traits used for analysis, including phenotypic measurements like Plant Height (PH), Nutritional Content (e.g., LysP, SC, AMLS), and metabolite or digestibility indicators (e.g., MD_Lys, MD_CF). This color-coded structure allows for easy differentiation between experimental setup and measurable outcomes, which is essential for downstream analyses such as Machine Learning-based trait prediction or genotype-performance evaluation.
+The excel file `ARE_crop_data.xlsx` is organized with detailed crop data where each row **corresponds to a specific plot entry**. The columns filled in **red** represent elements related to the field design, such as Year, Plot ID, Genotype, Management Type (Mgmt), and Planting Date (PD)—providing structural and temporal context of the field trial. The columns filled in **green** represent potential target traits used for analysis, including phenotypic measurements like Plant Height (PH), Nutritional Content (e.g., LysP, SC, AMLS), and metabolite or digestibility indicators (e.g., MD_Lys, MD_CF). This color-coded structure allows for easy differentiation between **experimental setup** and **measurable outcomes**, which is essential for downstream analyses such as **Machine Learning-based trait prediction** or **genotype-performance evaluation**.
 
-The objective of this section is to develop a model to predict a plant trait (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain modeling and machine learning skills. Below are the instructions to help you accomplish these tasks.
+The objective of this section is to **develop a model to predict a plant trait** (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain **modeling and machine learning skills**. Below are the instructions to help you accomplish these tasks.
 
-## ![A sorghum leaf being measured for its traits ](/images/Machine_Learning/ML2.webp)
+![A sorghum leaf being measured for its traits ](/images/Machine_Learning/ML2.webp)
 
 ## Before You Begin
 
-You should already have Python (3.9+), Conda (or Miniconda), JupyterLab or Google Colab set up, and the required libraries installed (e.g., `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `openpyxl`). If you have not done these steps or need a refresher, please refer back to the [**Installation Guide**](/docs/installation) for details on installing and verifying these tools.
+In this module, we will be using the **Google Colab** online coding environment we created during the `Installation` steps. If you have not done these steps or need a refresher, please refer back to the [**Installation Guide**](/docs/installation) for details on setting up a Google Colab online environment.
+
+{% callout title="Remember!" %}
+This is a team effort! If a fellow classmate on your team needs time to revisit the installation steps, help guide them through the steps carefully, and pass along any tips and tricks you may have learned along the way.
+{% /callout %}
 
 ---
 
@@ -30,9 +34,13 @@ You should already have Python (3.9+), Conda (or Miniconda), JupyterLab or Googl
 
 ### Download Project Files
 
-- Access the project files here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
-- You will be looking for the folder labeled **Section 2** that contains the following: (`ARE_ML_code.ipynb` & `ARE_crop_data.xlsx`), in it.
-- Within the `ARE_ML_code.ipynb` file, you are going to see 6 large code blocks. Those are code for the 6 different machine learning models, in which you are to use with the excel data for analysis.
+1. Your team will be accessing the files you need to begin this module here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
+2. You will be looking for the folder labeled **Section2: Machine_Learning_Regression_Models**.
+3. Double click this folder, and you should now see two files: `ARE_ML_code.ipynb` & `ARE_crop_data.xlsx`.
+4. You are now going to want to save both of these files, individually, to your local computer. We recommend saving them in the same place as one another. To save a file from Google Drive, find the 3 dots, and click them. You should see a button to `Download`.
+   ![Downloading files from Google Drive ](/images/Machine_Learning/ML3.webp)
+5. When prompted, select your file location of choice to place the files on your computer.
+6. You now have two downloaded files. In the `ARE_crop_data.xlsx` file, you will find the data collected throughout the field season. Within the `ARE_ML_code.ipynb` file, you are going to see 6 large code blocks. These blocks hold code for 6 different machine learning models, in which you are to use with the excel data for analysis.
 
 ---
 

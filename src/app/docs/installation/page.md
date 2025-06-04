@@ -8,13 +8,13 @@ nextjs:
 
 # Installation Guide
 
-This guide will walk you through the installation and setup process to ensure you are ready to start working on the Geospatial and Machine Learning portions of this project. Follow the steps below carefully, as you are able to use either Google Colab or JupyterLab as your development environment. The choice is yours!
+This guide will walk you through the installation and setup process to ensure you are ready to start working on the Geospatial and Machine Learning modules of this project. Follow the steps below carefully.
 
 ---
 
 ## Install Required Software
 
-#### **Install QGIS**
+#### Install QGIS
 
 - Visit the [QGIS Download Page](https://qgis.org/download/) (if you have not done already).
 - Choose the **Long Term Release (3.34 LTR)** version.
@@ -22,198 +22,123 @@ This guide will walk you through the installation and setup process to ensure yo
 
 ---
 
-### Install Visual Studio Code
+## Online Coding Environment
 
-1. Visit the [Visual Studio Code](https://code.visualstudio.com/) webpage (if you have not done so already).
+### Learning about Google Colab
 
-{% callout type="warning" title="Watch Out!" %}
-Please do not get _Visual Studio Code_ and _Visual Studio_ confused when you go to download the program! (Confusing, we know!) They are each their own program. You are looking for Visual Studio _`Code`_.
-{% /callout %}
+#### What Is an Online Coding Environment?
 
-2. Download the installer provided for your Operating System (_Mac/Windows_).
+For two of our modules, you will be using something called an **online coding environment**. An online coding environment is a web-based platform that lets you write, run, and test code entirely in your browser, **no installation required!** These environments provide a virtual workspace with a code editor, terminal or console, and often built-in libraries, so you can focus on learning and experimenting **without worrying about setting up software on your computer**. Because everything runs on cloud servers, you can access your projects from **any device** with an internet connection and collaborate with others **in real time**.
 
-3. After installing, launch VS Code.
+#### What Is Google Colab?
 
-{% callout title="You should know!" %}
-Launching the application might take a moment as it is a big program. Do not worry if it takes a minute or more to open for you.
-{% /callout %}
+The online coding environment you will be using is called **Google Colab**. Google Colab (_short for Colaboratory_) is one of these online coding environments specifically designed for Python. It’s a **free service** provided by Google that looks and feels like a Jupyter Notebook (_another very popular online code environment_), allowing you to mix executable code cells with formatted text, images, and visualizations. Colab runs your code on **Google’s cloud servers** (including free access to GPUs), automatically saves your work to Google Drive, and makes it **easy to share projects** with classmates or colleagues via a simple link.
 
-4. In your newly opened Visual Studio code window, navigate to the Extensions tab (`View` -> `Extensions`).
+#### Why Use Google Colab?
 
-5. Search for and install the following extensions:
+Google Colab is popular because it **removes many common barriers to getting started with programming** and data analysis. You don’t need to install Python or any libraries on your local machine, just open a browser, sign in, and begin coding. That is it! Colab also provides **free access** to powerful compute resources (like GPUs) that would otherwise be expensive or difficult to set up. Additionally, its seamless integration with Google Drive and easy sharing options make it **an ideal tool** for collaboration, whether you’re working on school projects, research, or any coding tutorial.
 
-   ```bash
-   'Python'
-   'Jupyter'
-   ```
+### Accessing Google Colab
 
-6. You should now have the following in your Extensions list under `Installed`:
-   ```bash
-   'Jupyter Slide Show'
-   'Jupyter Notebook Renderers'
-   'Jupyter Keymap'
-   'Jupyter Cell Tags'
-   'Jupyter'
-   'Python Debugger'
-   'Python'
-   'Pylance'
-   ```
+Alright, lets get started firing up your very first Google Colab environment!
 
-## Installing Python and Necessary Tools
+1. First, you are going to want to open up your internet browser and type in https://colab.research.google.com or follow this link here: [Google Colab](https://colab.research.google.com).
+2. Sign in with your Google account (if you do not have one, go ahead and make one).
+3. Once signed in, you should see a similar looking screen.
+   ![Welcome screen of Google Colab](/images/Intro/Installation/Installation1.webp)
 
-### Check Python Installation
+   {% callout title="You should know!" %}
+   If you have never used Google Colab before, you probably will not see any files in the `Recent` tab. **That is okay**, we will be moving our files to our environment later in the activity.
+   {% /callout %}
 
-1. Open a terminal (Command Prompt for Windows, Terminal for macOS/Linux).
-2. Run:
-   ```bash
-   python3 --version
-   ```
-   If Python 3.9 or higher is not installed, follow the steps below.
+4. From there, you are going to want to hit the `New notebook` button at the bottom left of the screen.
+   ![Google Colab new notebook selection](/images/Intro/Installation/Installation2.webp)
 
-### Install Python
+   {% callout title="You should know!" %}
+   Sometimes this process may take a while to load. You are accessing Google Cloud, and it may take awhile to ping their servers. No need to panic!
+   {% /callout %}
 
-1. Visit the [Python Downloads Page](https://www.python.org/downloads/).
-2. Download and install the latest version of Python 3.9 or higher.
-3. During installation, make sure to check **Add Python to PATH**.
+5. Once you have created a new notebook, you are now going to see an empty code editor screen. Congrats! You just created your first notebook file to work with your code in!
+   ![Google Colab new notebook screen](/images/Intro/Installation/Installation3.webp)
 
----
+Lets test that your environment is working with some sample code!
 
-## Installing Conda
+### Testing Sample Code in Colab
 
-Conda is a package and environment manager that makes it easy to install libraries and set up isolated environments for your projects.
+1. Lets start by naming our notebook that we are working in. Navigate to the top left of the screen where it says `Untitled0.ipynb`, and name it something you will remember. We are naming ours `My_First_Google_Notebook.ipynb`.
 
-### Why Use Conda?
+   {% callout type="warning" title="Important" %}
+   Make sure when renaming your file, that you keep the `.ipynb` file extension. The file will not save correctly without it! The `.ipynb` lets your computer know what kind of file it is.
+   {% /callout %}
 
-Conda helps you:
+   ![Renaming your notebook file in Google Colab](/images/Intro/Installation/Installation4.webp)
 
-- Manage multiple Python environments on the same machine.
-- Avoid library conflicts by keeping dependencies separate for each project.
-- Install both Python and non-Python packages efficiently.
+2. In order to run our code in the online environment, we are going to have to connect to a hosted runtime so our code executes. Navigate to the top right of the screen where it says `Connect`. When selected, then click `Connect to a hosted runtime`.
 
-### Install Miniconda
+   ![Connecting to a hosted runtime](/images/Intro/Installation/Installation5.webp)
 
-Miniconda is a lightweight version of Conda that includes only the essentials.
+   {% callout title="You should know!" %}
+   It may take a minute for the connection to be made, depending on how strong your wifi network signal is, and how many people are using the Colab service. It could be millions at a time!
+   {% /callout %}
 
-1. Visit the [Miniconda Downloads Page](https://docs.conda.io/en/latest/miniconda.html).
-2. Download the installer for your operating system.
-3. Follow the installation instructions, ensuring you add Miniconda to your system PATH.
+3. While it is loading, you should be seeing a message saying `Connecting...`.
 
-### Verify Installation
+   ![Connecting to a hosted runtime](/images/Intro/Installation/Installation6.webp)
 
-1. Open your terminal and run:
-   ```bash
-   conda --version
-   ```
-2. If you see the version number, Conda is successfully installed.
+4. When the process is finished, and you are connected to a runtime, you should now see a **green checkmark** and the works `RAM` and `Disk`. These metrics are there to show you how labor intensive your code is to run in the online environment.
 
-### Create a Virtual Environment
+   ![Connecting to a hosted runtime](/images/Intro/Installation/Installation7.webp)
 
-1. Create a new environment for your project:
-   ```bash
-   conda create -n geo_ml_env python=3.9
-   ```
-2. Activate the environment:
-   ```bash
-   conda activate geo_ml_env
-   ```
-3. Install required libraries:
-   ```bash
-   conda install pandas numpy scikit-learn matplotlib openpyxl
-   ```
+In the world of coding, sometimes to run your workflow, you need to install something called **libraries**. Libraries are essentially a collection of pre-written code, typically **functions** or **classes**, that can be used in multiple programs. It provides a **reusable set of tools** for common tasks, saving developers time and effort by avoiding the need to reinvent the wheel. Lets try this!
 
----
-
-## Installing JupyterLab
-
-JupyterLab provides a powerful interface for writing and running Python code.
-
-### Install JupyterLab
-
-1. Open your terminal and install JupyterLab using pip:
-   ```bash
-   pip install jupyterlab
-   ```
-   If using Conda, you can install it within your Conda environment:
-   ```bash
-   conda install jupyterlab
-   ```
-2. Verify installation:
-   ```bash
-   jupyter --version
-   ```
-
-### Launch JupyterLab
-
-1. Start JupyterLab by running:
-   ```bash
-   jupyter lab
-   ```
-2. A browser window will open with the JupyterLab interface.
-3. Create a new notebook by selecting `File > New > Notebook` and choosing Python as the kernel.
-
----
-
-## Setting Up Google Colab
-
-Google Colab is an online platform that doesn’t require local installations, making it beginner-friendly.
-
-### Access Google Colab
-
-1. Open your browser and go to [Google Colab](https://colab.research.google.com).
-2. Sign in with your Google account.
-
-### Install Required Libraries in Colab
-
-1. Open a new notebook in Google Colab.
-2. In the first code cell, run:
+1. In the first code cell, you are going to type the following:
    ```python
    !pip install pandas numpy scikit-learn matplotlib openpyxl
    ```
-3. Confirm the libraries are installed by importing them in a new code cell:
+2. You may notice that next to the code you just typed in your cell, is a small button with the **Play** icon. In order to run your code, you can press this button. You should start to see the icon have a loading bar around it when pressed.  
+   ![Running code in a cell](/images/Intro/Installation/Installation8.webp)
+
+3. Upon successful completion of running your code, you should now see a little **green checkmark** and the time is took to run the code in milliseconds.  
+   ![Running code in a cell successful](/images/Intro/Installation/Installation9.webp)
+
+   {% callout type="warning" title="Important" %}
+   If you get an error, or see a red 'x', go back and check your code. Make sure it was correctly written, and also make sure you have **connected to a hosted runtime** like we did previously.
+   {% /callout %}
+
+4. Alright! So lets now confirm the libraries are installed by importing them in a new code cell. When you import your **newly installed libraries**, you are now allowing the code that you write, to **access them**. You are going to want to create a new cell below the one you just put code in. Do this by navigating to the toolbar and finding the `+ Code` button. Press this, and you should now see a new empty cell underneath your first cell.
+
+   ![Creating a new tab](/images/Intro/Installation/Installation10.webp)
+
+5. In your newly created code cell, please copy the code below into it and hit the **Play** button again:
+
    ```python
    import pandas as pd
    import numpy as np
    from sklearn.model_selection import train_test_split
    ```
 
-{% callout title="You should know!" %}
-Google Colab is a cloud-based platform, so you don’t need to worry about local installations. It’s perfect for beginners!
-{% /callout %}
+   {% callout type="warning" title="Important" %}
+   Make sure your code is properly aligned and not indented! If your code is not properly aligned, you can run into the following error:
+   ![Possible error you may run into](/images/Intro/Installation/Installation11.webp)
+   {% /callout %}
 
----
+6. If that was successful and you once again see the mini green checkmark, that means you have successfully now imported your installed libraries into your notebook, to be used by your code! Lets do one last check to make sure.
 
-## Installing Python Libraries
+7. Create one more empty coding cell, and paste the following code into it (_remember not to indent!_):
 
-These libraries are essential for the project. Follow these steps for either Google Colab or JupyterLab:
-
-### Installation Command
-
-Run the following in your terminal or notebook:
-
-```bash
-pip install pandas numpy scikit-learn matplotlib openpyxl
+```python
+   print("pandas version:", pd.__version__)
+   print("numpy version:", np.__version__)
 ```
 
-If using Conda:
+8. If all of the steps above were run successfully, you should now see versions for each of the libraries that we installed into our notebook!
 
-```bash
-conda install pandas numpy scikit-learn matplotlib openpyxl
-```
-
-### Verify Installation
-
-1. Open a Python terminal or notebook.
-2. Import the libraries:
-   ```python
-   import pandas as pd
-   import numpy as np
-   from sklearn.model_selection import train_test_split
-   from sklearn.linear_model import BayesianRidge
-   ```
-3. If no errors occur, the installation was successful.
+   ![Checking if the version code was run successfully](/images/Intro/Installation/Installation12.webp)
 
 ---
 
 ## Good Luck!
 
-With these installations complete, you are ready to start coding and exploring the project. Happy coding!
+And thats it! You have covered all of the basics in being able to use and setup Google Colab to successfully complete the rest of the activity with your classmates. With these installations complete, you are ready to start coding and exploring the rest of the project. Happy coding!
+
+Please navigate to the `Core Concepts` tab if you would like to do a deep dive into the science behind this project!
