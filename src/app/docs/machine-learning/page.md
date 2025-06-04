@@ -40,43 +40,110 @@ This is a team effort! If a fellow classmate on your team needs time to revisit 
 4. You are now going to want to save both of these files, individually, to your local computer. We recommend saving them in the same place as one another. To save a file from Google Drive, find the 3 dots, and click them. You should see a button to `Download`.
    ![Downloading files from Google Drive ](/images/Machine_Learning/ML3.webp)
 5. When prompted, select your file location of choice to place the files on your computer.
-6. You now have two downloaded files. In the `ARE_crop_data.xlsx` file, you will find the data collected throughout the field season. Within the `ARE_ML_code.ipynb` file, you are going to see 6 large code blocks. These blocks hold code for 6 different machine learning models, in which you are to use with the excel data for analysis.
+6. You now have two downloaded files. In the `ARE_crop_data.xlsx` file, you will find the data collected throughout the field season. This is what will be our _dataset_. Within the `ARE_ML_code.ipynb` file, you are going to see 6 large code blocks. These blocks hold code for 6 different machine learning models, in which you are to use with the excel dataset file for analysis.
 
----
+## Machine Learning Models
 
-### Create a Project Directory
+As mentioned in the previous section, in the `ARE_ML_code.ipynb` file, you will see provided code that implements six regression models to **handle crop trait prediction**. Please see the following to see what these models are called, and a very high level summary of each of them:
 
-1. Create a folder for your project (e.g., `geo_ml_project`).
-2. Place your dataset (`ARE_crop_data.xlsx`) in this folder.
-3. Save your Python scripts and notebooks in the same directory.
+- **Partial Least Squares (PLS) Regression**: Finds patterns by combining features into simpler parts to predict something when you have lots of related data.
+- **Lasso Regression**: Helps pick only the most important features by shrinking less useful ones down to zero.
+- **ElasticNet Regression**: Combines Lasso and another method (Ridge) to balance feature selection and avoid overfitting.
+- **Bayesian Ridge Regression**: Adds a bit of randomness to the prediction process to make it more stable and handle uncertainty better.
+- **Xtreme Gradient Boosting (XGBoost)**: Builds lots of small decision trees that learn from each other to make powerful predictions.
+- **Support Vector Regression (SVR)**: Tries to find a smooth line that fits the data while ignoring small errors, making it good for tricky patterns.
 
-### Prepare the Dataset
+You will have access to each of these, so feel free to use any of them or implement additional models such as **Random Forest** or **Linear Regression**, depending on your preference and familiarity.
 
-1. Ensure your dataset is in `.xlsx` format.
-2. **Discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Management`**, and **`Planting Date`**.
-3. **Select everything in your file**, while in the `Home` tab, find the dropdown for `Number` formatting, select `General`.
-4. **Keep the `Year` column** as numeric values (e.g., 2023, 2024), which will be crucial when splitting your data into training (2023) and testing (2024).
+{% callout title="You should know!" %}
+For this portion of the activity, we have provided _all_ of the code you will need, for you! No prior coding experience needed!
+{% /callout %}
 
 ---
 
 ## Choosing Your Target Trait
 
-You can select one trait to predict (referred to as the “target”) from among the green-filled traits (e.g., `Yield (Y)`, `protein crude (PC)`, or `quantum yield of PSII (PhiPS2)`), while using other available traits as input features. Make sure to remove any non-numeric or irrelevant columns (like the field design columns mentioned above) before proceeding.
+In machine learning, especially in **predictive modeling**, we try to predict something based on other pieces of information. That "something" we want to predict is called the **target trait** (also known as the target variable or label). In this project, the traits in your dataset are **measurable characteristics** of the plants—such as Yield (Y), Protein Crude (PC), or Quantum Yield of PSII (PhiPS2).
+
+You will choose one of these green-highlighted traits as your _**target trait**_. This is the outcome your model will try to predict. For example, if you choose "Yield (Y)" as your target, the **goal** of your machine learning model will be to **predict how much yield a plant will produce** based on the values of other traits.
+
+The other traits in the dataset, such as **plant height**, **chlorophyll content**, or **leaf area**, will serve as your input features. These features are the information the model uses to make predictions about the target trait. The **better the quality** and **relevance** of your input features, the more accurate your model’s predictions will be.
+
+Before training your model, you’ll need to do some cleaning of the dataset! This means removing:
+
+- Non-numeric columns, like plant ID or notes
+- Irrelevant data, such as field layout info or metadata not useful for prediction
+- Your cleaned dataset should contain only numeric columns related to plant traits, one of which will be your target, and the rest will be your inputs.
+
+In summary, you will select **one trait** to predict (referred to as the “target”) from among the green-filled traits (e.g., Yield (Y), protein crude (PC), or quantum yield of PSII (PhiPS2)), while using other available traits as **input features**. Make sure to remove any non-numeric or irrelevant columns (like the field design columns mentioned above) before proceeding!
+
+#### Key Terms to Remember:
+
+- **Trait**: Any measurable characteristic of the plant.
+- **Target trait** (target variable): The trait you are trying to predict (e.g., Y, PC, or PhiPS2).
+- **Input features** (predictors): The traits used to help predict the target.
 
 ---
 
-## Available Machine Learning Models
+Let us resume where we have left off! As a recap, you should have the following two files downloaded to your computer: `ARE_ML_code.ipynb` & `ARE_crop_data.xlsx`.
 
-We have provided code that implements six regression models to handle crop trait prediction:
+We are now going to move on to **preparing the dataset** you will be working with.
 
-- **Partial Least Squares (PLS) Regression**
-- **Lasso Regression**
-- **ElasticNet Regression**
-- **Bayesian Ridge Regression**
-- **Xtreme Gradient Boosting (XGBoost)**
-- **Support Vector Regression (SVR)**
+### Create a Project Directory (_Optional_)
 
-Feel free to use any of these or implement additional models such as **Random Forest** or **Linear Regression**, depending on your preference and familiarity.
+This is an optional step. If you already know the path of your downloaded files, you can keep them there, or you can condense them into a folder. The choice is yours!
+
+1. Create a folder for your project (e.g., `geo_ml_project`).
+2. Place your dataset (`ARE_crop_data.xlsx`) in this folder.
+3. Now place your coding notebook in the same folder (`ARE_ML_code.ipynb`).
+4. You now have what is called a **Project Directory**! This is just a fancy term for a place where you have all code files related to the same project, stored in one spot.
+
+### Prepare the Dataset
+
+Let us move on to the `ARE_crop_data.xlsx` dataset.
+
+1. Ensure the dataset that you just downloaded is in `.xlsx` format.
+2. Open the file using **Excel**.
+3. With the file open, **discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Management`**, and **`Planting Date (PD)`**.
+4. **Select everything in your file**, while in the `Home` tab, find on the top menu the **Cell/Format** option. Click on `Format` and scroll down to the bottom and click on `Format Cells`. Choose the top left tab **Numbers** and select `General`.
+5. **Keep the `Year` column** as numeric values (e.g., 2023, 2024), which will be crucial when splitting your data into training (2023) and testing (2024).
+
+---
+
+## Moving to Google Colab
+
+### Moving your files
+
+We are going to now want to **move your downloaded project files** (or folder if you just combined them), to **Google Colab** so you can run these files.
+
+1. With your internet browser open, navigate to the Google Colab website once more, if you are not already there.
+
+   {% callout type="warning" title="Important" %}
+   If you had the tab open, and did not interact with Google Colab for too long, you may have to **restart your runtime** to be able to run code again. Remember, this is in the _far right corner_ by clicking the `Connect` button. You are looking for the green check mark to know you are successfully connected.
+   {% /callout %}
+
+2. With Google Colab open, navigate to the Toolbar and select the `File` button, and when shown more options, please select the `Upload notebook` button
+   ![Uploading a new notebook](/images/Machine_Learning/ML4.webp)
+
+3. You should now see the **Browse** button. Click this and navigate to where your `ARE_ML_code.ipynb` notebook file is located.
+
+   ![Opening a new notebook](/images/Machine_Learning/ML5.webp)
+
+4. Select the file, and click the `Upload` button. This will upload our notebook to Google Colab to be used.
+   ![Finding the files button](/images/Machine_Learning/ML6.webp)
+
+5. With your file now open, you will now want to navigate to the left side of your screen. You should see 5 icons. You are going to want to click the icon like **looks like a folder**.
+   ![Finding the file upload button ](/images/Machine_Learning/ML7.webp)
+
+6. When this tab opens, you will now see 4 more icons. You are going to want to click the **first icon**, to **upload your files**.
+   ![Finding the upload button ](/images/Machine_Learning/ML8.webp)
+
+7. Your computer should now be prompting you to **select from your computer's files**. You are going to want to navigate to where you placed the `ARE_crop_data.xlsx` dataset file.
+   ![Finding the upload button ](/images/Machine_Learning/ML9.webp)
+
+8. If that was successful, you should now see your **file that you selected**, in the file selection area in Google Colab. ![Confirming the file was successfully uploaded ](/images/Machine_Learning/ML10.webp)
+
+Congrats! Your dataset file is now usable in Google Colab.
 
 When using the provided code, **replace** the placeholder `target_trait` with the actual name of the target you selected. This can be done manually or by asking ChatGPT to do it for you in a single command:
 
@@ -118,7 +185,11 @@ Happy modeling!
 
 ### Now You Know
 
-At this point, you might be thinking, _"Alright, but what’s the point of all this? Why do we even bother with modeling and regression models in the first place?"_ We had the very same questions when we started out, so we took the time to reflect on our journey, pinpoint the most pressing questions we had, and put together clear, straightforward answers to help you make sense of it too!
+At this point, you might be thinking...
+
+> Alright, but what’s the point of all this? Why do we even bother with modeling and regression models in the first place?
+
+We had the very same questions when we started out, so we took the time to reflect on our journey, pinpoint the most pressing questions we had, and put together clear, straightforward answers to help you make sense of it too!
 
 **What is Modeling?**
 Modeling is the process of creating a simplified version of real-world scenarios using mathematics and data. In science, we use models to understand patterns, make predictions, and test ideas without always needing to run experiments in real life.
