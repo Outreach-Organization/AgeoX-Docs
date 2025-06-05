@@ -100,13 +100,20 @@ This is an optional step. If you already know the path of your downloaded files,
 
 ### Prepare the Dataset
 
-Let us move on to the `ARE_crop_data.xlsx` dataset.
+Let us move on to preparing and cleaning the `ARE_crop_data.xlsx` dataset.
 
 1. Ensure the dataset that you just downloaded is in `.xlsx` format.
 2. Open the file using **Excel**.
-3. With the file open, **discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Management`**, and **`Planting Date (PD)`**.
-4. **Select everything in your file**, while in the `Home` tab, find on the top menu the **Cell/Format** option. Click on `Format` and scroll down to the bottom and click on `Format Cells`. Choose the top left tab **Numbers** and select `General`.
-5. **Keep the `Year` column** as numeric values (e.g., 2023, 2024), which will be crucial when splitting your data into training (2023) and testing (2024).
+   ![Viewing file in Excel ](/images/Machine_Learning/MLExcel1.webp)
+3. With the file open, **discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Mgmt`**, and **`Planting Date (PD)`**.
+   ![Discarding not needed columns ](/images/Machine_Learning/MLExcel2.webp)
+4. With the columns deleted, this is now how your dataset should now look:
+   ![Confirming how dataset now looks ](/images/Machine_Learning/MLExcel3.webp)
+5. Odds are, you dataset is already set to how we would like it, but in science it is always best to double check! **Select everything in your file** (_clicking the square in the top left of your data table_). While in the `Home` tab, find on the top menu the **Number Formatting dropdown**. Click on this, and scroll down to `General`. Select `General`, _even if it is already prepopulated in the dropdown_.
+   ![Formatting data using the Number Formatting dropdown](/images/Machine_Learning/MLExcel4.webp)
+6. Your dataset should now look similar this this:
+   ![Confirming the dataset looks correct](/images/Machine_Learning/MLExcel5.webp)
+7. Make sure to now **save** your now updated file!
 
 ---
 
@@ -141,29 +148,87 @@ We are going to now want to **move your downloaded project files** (or folder if
 7. Your computer should now be prompting you to **select from your computer's files**. You are going to want to navigate to where you placed the `ARE_crop_data.xlsx` dataset file.
    ![Finding the upload button ](/images/Machine_Learning/ML9.webp)
 
-8. If that was successful, you should now see your **file that you selected**, in the file selection area in Google Colab. ![Confirming the file was successfully uploaded ](/images/Machine_Learning/ML10.webp)
+8. If that was successful, you should now see your **file that you selected**, in the file selection area in Google Colab.
+   ![Confirming the file was successfully uploaded ](/images/Machine_Learning/ML10.webp)
 
 Congrats! Your dataset file is now usable in Google Colab.
 
-When using the provided code, **replace** the placeholder `target_trait` with the actual name of the target you selected. This can be done manually or by asking ChatGPT to do it for you in a single command:
+{% callout title="You should know!" %}
+Whenever you see a `#` in the code, you should know this means that all of the words following that symbol, **represent a comment**. In coding, comments are used to explain **what the block of code underneath the comment does**, or **how the code operates**. Before running the code, take a few minutes to read through the comments we have provided to you in the code, to get a **better understanding** of what each block of code is doing!
 
-> "Please update this code to replace `target_trait` by `XXXX`."
+Depending on your code editor, sometimes comments display as **green text**, and sometimes they display as **gray text**. In our code, you are looking for the _green_ text.
+{% /callout %}
 
 ---
 
 ## Running the Models and Collecting Outputs
 
-1. **Load your dataset** into your chosen environment (JupyterLab or Google Colab).
-2. **Import the necessary libraries** (e.g., `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `openpyxl`, etc.).
-3. **Split your dataset** so that data from **2023** is used for training and data from **2024** is used for testing.
-4. **Update the provided regression code** (or your own scripts) to reflect your chosen target trait.
-5. **Train the models**.
-6. **Save the outputs**:
-   - A spreadsheet (Excel file) containing the **predicted** and **observed** values of your target trait.
-   - **Model evaluation metrics** (e.g., R², RMSE) for each regression model.
-   - A **figure** showing the regression plot of the predicted vs. observed values.
+Alright so as a recap, at this point we now have our dataset cleaned, and your machine learning module and dataset **uploaded to Google Colab**. Lets start to run the code shall we!
 
----
+1. Your dataset and model notebook should be **loaded into Google Colab** at this point.
+   ![Confirming the files are in Google Colab](/images/Machine_Learning/ML11.webp)
+2. Lets walk through the first model together! You should see the name of the first model at the very top, "**#Partial Least Square Regression model**". Notice above the rest of the code is the comments we talked about earlier (_a # followed by green text_). At the beginning of the code we are first importing in all of the required python libraries and dependencies needed to make our code work (e.g., `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `openpyxl`, etc.).
+   ![Showing where the import statements are in the code](/images/Machine_Learning/ML12.webp)
+
+3. The next chunk of code is what will be allowing our `ARE_crop_data.xlsx` dataset file to be used in our notebook.
+   ![Showing the code that allows you to use the dataset](/images/Machine_Learning/ML13.webp)
+
+4. _**This next code block is very important!**_ This is where you will be choosing your desired trait to analyze from the `ARE_crop_data.xlsx` dataset file.
+
+   ![Choosing your desired trait to analyze](/images/Machine_Learning/ML14.webp)
+
+5. Go back to the `ARE_crop_data.xlsx` dataset file, and choose a trait! We are going to choose `Yield(Y)`.
+   ![Choosing your desired trait to analyze, Yield](/images/Machine_Learning/ML15.webp)
+
+6. Now since we chose the trait `Yield(Y)`, we are going to replace `target_trait`, with `Y`.
+
+```python
+   data = data.dropna(subset=['target_trait'])
+```
+
+To:
+
+```python
+   data = data.dropna(subset=['Y'])
+```
+
+{% callout type="warning" title="Important!" %}
+We are writing `Y` and not "Yield" because even though the Y = Yield, in our dataset file the column is strictly labeled as **Y** only!
+{% /callout %}
+![Showing the excel table where we got the desired plant trait we want to analyze](/images/Machine_Learning/ML16.webp)
+
+7. You will now need to update all of the locations that say `target_trait` to `Y`.
+   ![Verifying all of the code spots are correctly filled with the selected trait](/images/Machine_Learning/ML17.webp)
+   {% callout type="warning" title="Important!" %}
+   You will have to do this step for each new model that you start to work on! Whenever you choose a trait, you will have to put that trait, and replace the `target_trait` spot in the code.
+   {% /callout %}
+8. And that is it! Since you have selected a trait to analyze, and let the code know which trait from the dataset you are looking to analyze, you are good to **run the code**! We will do this by finding the **Play** button at the top left of a code block, and selecting it.
+   ![Showing where the Play button is to run the code ](/images/Machine_Learning/ML18.webp)
+
+If successfull, you should see a **green checkmark** next to the play button, and underneath the code:
+
+- A **figure** showing the regression plot of the predicted vs. observed values.
+  ![Showing the final result ](/images/Machine_Learning/ML19.webp)
+
+{% callout title="You should know!" %}
+That everytime you run a code block, the figure that you see at the bottom of the code block, and an excel file with the **Observed** and **Predicted** results will be saved in the console on the left. If you do not see it, you may have to use the **refresh button**.
+![Showing the saved figures and results in the console ](/images/Machine_Learning/ML22.webp)
+![Showing the saved results in the console ](/images/Machine_Learning/ML23.webp)
+{% /callout %}
+
+Here is the breakdown of the **summary of each block of code** for a model (_this is the same information that is in the comments in the **green** text_):
+
+1. Loading your dataset into your chosen environment (Google Colab).
+2. Import the necessary libraries (e.g., pandas, numpy, scikit-learn, matplotlib, openpyxl, etc.).
+3. Loading and handling missing data.
+4. Spliting your dataset so that data from 2023 is used for training and data from 2024 is used for testing.
+5. Define features and target
+6. Transformation and scaling
+7. Train the models
+8. Prediction and evaluation
+9. Save the outputs
+
+Feel free to now try using the selected trait (`Y`), with the other models, or choose a different trait to analyze!
 
 ## Tuning Your Models
 
@@ -221,6 +286,15 @@ Once the model makes predictions, we compare the prediction data to actual data 
 
 **What are the predictors variables?**
 When you integrate diverse data as inputs in models, not all the variables will be relevant to the model to make good guesses. Then the most important variables or features are crucial information to understand which variable drives the model output, then next time you will not need to collect all the other data.
+
+**What is an example of expected regression plots?**
+Here is an example of regression plots you might expect to generate. This graph that you are seeing has very good model output as the R2 is close to 1 and the RMSE is low:
+
+![Showing a regression plot example ](/images/Machine_Learning/ML20.webp)
+
+This graph shows a good model output as R2 is a midpoint between 0 and 1 and the RMSE is higher than what the above graph is showing:
+
+![Showing a second regression plot example ](/images/Machine_Learning/ML21.webp)
 
 {% callout title="Stop for a breath!" %}
 Take a minute to reflect on all of the information. We know it is a lot to take in at once! Machine Learning is not an easy concept, it takes a long time to understand well and become an expert at. If you are curious and eager to learn more, please see the links below to become an expert yourself!
