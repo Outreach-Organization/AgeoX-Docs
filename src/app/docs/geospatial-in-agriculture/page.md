@@ -70,4 +70,36 @@ We cannot stress enough that these geospatial tools are **instrumental** in disa
 
 ---
 
+## 📝 Pop Quiz! 📝
+
+Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
+
+#### Questions
+
+1. What is precision agriculture and what is another name for it?
+2. How do GIS and GPS contribute to precision agriculture?
+3. What is a “prescription map” and how is it used in farming?
+4. Name at least two benefits of using precision agriculture practices.
+5. What does real-time monitoring allow farmers to detect early?
+6. What types of data are used in real-time monitoring with GIS tools?
+7. How does real-time monitoring support climate change adaptation in agriculture?
+8. What kinds of technologies are used for real-time monitoring in farming?
+9. Why is it important to tailor agricultural practices to different zones within a field?
+10. How can geospatial tools help in responding to natural disasters like floods or wildfires?
+
+#### Answers
+
+1. Precision agriculture is a farming method that uses technology to manage variability in fields, and it's also called site-specific crop management (SSCM).
+2. GIS and GPS provide detailed spatial data that helps farmers understand conditions in specific parts of a field to make more accurate decisions.
+3. A prescription map is a guide that shows where and how much input (like water or fertilizer) should be applied in different parts of a field.
+4. Improves crop yield, reduces input waste, promotes sustainability, conserves water, and reduces environmental impact.
+5. It allows early detection of crop diseases, pests, water stress, and nutrient deficiencies.
+6. Weather trends, soil quality, topography, and historical crop performance data.
+7. It helps design cropping strategies that can handle future climate conditions, like recommending more resilient crop types.
+8. Satellites, drones (UAVs), and environmental sensors.
+9. Because not every part of a field has the same soil, moisture, or nutrient levels—treating them differently increases efficiency.
+10. By modeling and evaluating risk zones, guiding emergency responses, and supporting long-term land-use planning.
+
+---
+
 Continue on to the final `Core Concepts` section to read about what Sorghum is, and why our lab studies it here at the Danforth Plant Science Center!

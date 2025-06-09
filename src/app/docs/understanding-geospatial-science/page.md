@@ -90,4 +90,36 @@ Please see below the resources that we used, to provide you the information abov
 
 ---
 
+## 📝 Pop Quiz! 📝
+
+Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
+
+#### Questions
+
+1. What is geospatial science the study of?
+2. What three types of information are combined in geospatial data?
+3. How does geospatial data differ from traditional data?
+4. Name at least two tools used to analyze or visualize geospatial data.
+5. What does GIS stand for, and what does it do?
+6. What are the five core components of a GIS system?
+7. Why is GIS important for understanding spatial patterns?
+8. Give two real-world applications of geospatial technologies.
+9. What is remote sensing, and how is it used in geospatial science?
+10. Why is it important to understand the difference between geospatial and traditional data when working with GIS?
+
+#### Answers
+
+1. Geospatial science is the study of location-based data combined with analytical and technological tools like GIS and GPS.
+2. Location information, attribute data (about objects or events), and temporal data (when things happen).
+3. Geospatial data includes geographic context (like coordinates), while traditional data usually does not.
+4. GIS software, satellite imagery, GPS, remote sensing tools.
+5. GIS stands for Geographic Information Systems, and it helps collect, store, analyze, and visualize spatial data.
+6. Hardware, software, data, people, and methods.
+7. Because it allows researchers to see how things are distributed and related across geographic space, supporting better decisions.
+8. Urban planning, disaster management, agriculture, environmental monitoring, transportation.
+9. Remote sensing involves collecting data from satellites or aircraft to observe environmental changes over time.
+10. Because GIS tools rely on spatial context, and using non-spatial (traditional) data can lead to confusion or errors.
+
+---
+
 Continue on to the second `Core Concepts` section to read about the importance of Geospatial research!

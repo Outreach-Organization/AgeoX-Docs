@@ -54,4 +54,51 @@ Sorghum research isn’t just about improving crops—it’s about creating sust
 
 ---
 
+## Resources Used
+
+Please see below the resources that we used, to provide you the information above!
+
+- Source used for general information about Sorghum:
+  [Sorghum101](https://www.sorghumcheckoff.com/sorghum-101/)
+
+- Second source used for facts about Sorghum: [Discover Sorghum](https://sorghumgrowers.com/sorghum-101/)
+
+- Third source used for information on Sorghum's nutritional value and uses: [Sorghum | Nutrition, Uses, & Description](https://www.britannica.com/plant/sorghum-grain)
+
+- Fourth source used for fun facts about Sorghum: [Fun Facts about Sorghum](https://kansasfarmfoodconnection.org/spotlights/fun-facts-about-sorghum)
+
+---
+
+## 📝 Pop Quiz! 📝
+
+Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
+
+#### Questions
+
+1. What are the three farming methods being tested in Shakoor Lab’s sorghum research project?
+2. What is the main goal of the five-year sorghum research project at Shakoor Lab?
+3. What is no-till farming, and why is it beneficial?
+4. How does precision nitrogen application help improve farming?
+5. What are cover crops, and what benefits do they provide?
+6. Why is sorghum considered a sustainable crop?
+7. Name at least three nutrients found in sorghum grain.
+8. What makes sorghum a “Climate Smart” crop?
+9. How does sorghum contribute to combating climate change?
+10. Which country is the largest producer of grain sorghum, and how many tons did it produce in 2021?
+
+#### Answers
+
+1. No-till farming, precision nitrogen application, and cover cropping.
+2. To identify which sorghum varieties perform best under different farming systems in terms of yield and sustainability.
+3. No-till farming is planting without disturbing the soil, which helps protect soil health and prevent erosion.
+4. It delivers the right amount of fertilizer at the right time, reducing waste and improving plant health.
+5. Cover crops are planted between main crops to enrich soil, reduce erosion, and support environmental health.
+6. Because it grows well in tough conditions, supports carbon sequestration, and can be used for food and energy.
+7. Protein, iron, zinc, phosphorus, and B-complex vitamins.
+8. It can thrive in hot, dry climates and efficiently turns sunlight into biomass.
+9. Through carbon sequestration—capturing and storing atmospheric carbon in plant biomass and soil.
+10. The United States, which produced 11 million tons of grain sorghum in 2021.
+
+---
+
 Congrats on completing the `Core Concepts` module, on what our lab and this activity is all about! When you are ready, please move on to the `Project` portion of the activity. You can begin the activity by clicking the **Next** arrow bottom of the page, or using the navigation on the left side of the page.
