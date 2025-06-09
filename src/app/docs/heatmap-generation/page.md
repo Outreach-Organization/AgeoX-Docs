@@ -141,11 +141,63 @@ And that is it! Congrats on successfully creating your first map using real data
 
 ---
 
+## Saving Your Heatmap
+
+This next set of instructions is _technically optional_ for the time being, if you wanted to move on. **You will eventually have to do this step** in **Module Three** though, so we figured we may as well include the needed steps while you still have your QGIS program open!
+
+You have created the heatmap, now we need to **save it** as a **PNG** file for later use. Let us walk through how to do this.
+
+### Collecting & Exporting the Heatmap from QGIS
+
+Follow these steps in your **already openned QGIS program** to export your heatmap as a **PNG image file**:
+
+1. **Have open your QGIS Project**
+
+   - If you had previously closed your instructions, please run through the **Module One** content again and complete your heatmap generation.
+
+2. **Select Layout Manager**
+   - Go to `Project` then select `Layout Manager…`
+
+![Finding the Project button and then the Layout Manager button](/images/TensorBoard/TB1.webp)
+
+3. **Create a New Layout**
+   - Name it “**Heatmap Layout**”, and click `OK`.
+
+![Naming the layout](/images/TensorBoard/TB3.webp)
+
+4. **Add Map to Layout**
+   - In the **Layout** toolbar, click the `Add Map` tool icon.
+
+![Adding the map](/images/TensorBoard/TB4.webp)
+
+5. **Draw a rectangle**
+   - Draw a rectangle on the canvas, your heatmap layer will appear inside.
+
+![Drawing a rectangle](/images/TensorBoard/TB5.webp)
+
+6. **Export as Image**
+   - Go to `Layout` then select `Export as Image…`
+   - Choose **PNG**, give it a filename (e.g., **Heatmap Layout.png**), and click `Save`.
+
+![Drawing a rectangle](/images/TensorBoard/TB6.webp)
+
+7. **Verify the PNG**
+   - Locate and open **Heatmap Layout.png** to ensure it exported correctly.
+   - Keep this PNG to be used later in **Module Three**.
+
+**SCREENSHOT**
+
+{% callout type="warning" title="Important!" %}
+Please remember where you saved your **Heatmap.png** file! If you forget, or lose track of it, you will have to run **all of Module One** again to make another!
+{% /callout %}
+
+---
+
 ## Learning Continued
 
 ### Now You Know
 
-So you have generated your heatmap, now what? You are probably thinking, why was this important and how are heatmaps relevant? Lets find out...
+So you have generated and saved your heatmap, now what? You are probably thinking, why was this important and how are heatmaps relevant? Lets find out...
 
 ### Analyzing the heatmap
 
