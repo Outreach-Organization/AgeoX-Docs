@@ -85,25 +85,10 @@ Before starting this project, ensure you have access to the following:
 
 ### Tools and Software
 
-- **Python (3.9 or higher)**: Programming language for coding the project.
-- **Google Colab or JupyterLab**: Platforms for running Python scripts and notebooks.
-- **Excel or CSV Editor**: To view and manage data files.
-
-### Required Libraries
-
-You will need the following Python libraries:
-
-- pandas
-- numpy
-- scikit-learn
-- matplotlib
-- openpyxl
-
-If you are unsure how to install these, don’t worry. Detailed setup instructions are provided in the specific sections for JupyterLab and Google Colab.
-
-{% callout type="warning" title="Watch Out!" %}
-Ensure all required libraries are installed before proceeding. Missing dependencies can cause errors that are often hard to debug.
-{% /callout %}
+- **A stable Wifi/Internet Connection**: Make sure you have access to a good wifi network to be able to access the internet.
+- **Internet browser of choice**: We will be accessing an online coding environment, so have your preferred internet browser downloaded.
+- **Google Colab**: We will be accessing this platforms for running Python scripts and notebooks, via the internet.
+- **Excel or CSV Editor**: To view and manage the data files we will be working with.
 
 ---
 
@@ -120,6 +105,7 @@ This project focuses on:
 You will work with:
 
 - Wireless sensor data
+- Drone data
 - Climate data
 - Field technician observations
 - Crop data
@@ -135,26 +121,7 @@ The `Machine Learning` portion of the project includes learning about six pre-im
 - Extreme Gradient Boosting (XGBoost)
 - Support Vector Regression (SVR)
 
-You are encouraged to explore these models and even implement your own, such as Random Forest or Linear Regression.
-
----
-
-## Quick Start
-
-Already familiar with development environments like Google Colab and JupyterLab? Great! Use the exercises below to refresh your skills and get hands-on practice with these tools. These mini-tasks will help you set up your environment and ensure everything is ready for the project.
-
-### Google Colab
-
-1. Open [Google Colab](https://colab.research.google.com).
-2. Install required libraries using:
-   ```python
-   !pip install pandas numpy scikit-learn matplotlib openpyxl
-   ```
-3. Upload your dataset and start coding!
-
-{% callout title="You should know!" %}
-Google Colab is a cloud-based platform, so you don’t need to worry about local installations. It’s perfect for beginners!
-{% /callout %}
+You are encouraged to explore these models and even implement your own, such as Random Forest or Linear Regression after completing our module!
 
 ---
 
@@ -171,7 +138,7 @@ Google Colab is a cloud-based platform, so you don’t need to worry about local
 
 If you encounter challenges or have questions, there are several resources to support you:
 
-- **Ask Your Instructor**: Your teacher is there to help clarify instructions and troubleshoot issues.
+- **Ask Your Instructor**: Your educator is there to help clarify instructions and troubleshoot issues.
 - **Internet Forums**: Visit popular code forums like [Stack Overflow](https://stackoverflow.com/questions) to have your questions answered in depth.
 - **Google It**: Use search engines to look up terms or code that you find challenging.
 - **Review Documentation**: Refer to this guide or library-specific documentation for deeper insights.
@@ -198,7 +165,7 @@ We appreciate your feedback and will do our best to assist you promptly!
 
 ## Continued Learning
 
-Want to learn more? Checkout these resources below!
+Want to learn more about basic coding before you start? Checkout these resources below!
 
 #### Coding
 
