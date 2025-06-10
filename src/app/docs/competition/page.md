@@ -6,9 +6,9 @@ nextjs:
     description: The Sorghum Prediction Challenge
 ---
 
-# 🚀 Fine-Tuning Machine Learning Models for Peak Performance
+# Fine-Tuning Machine Learning Models for Peak Performance
 
-Let's make this activity competitive! Do you and your team have what it takes to create a model that most accurately predicts plant traits of our sorghum? Compete with peers to develop the most accurate prediction using real-world climate data and soil conditions.
+Let's make this activity competitive! Do you and your team have what it takes to create a model that most accurately predicts plant traits of our sorghum? Compete with your peers to develop the most accurate prediction using real-world climate data and soil conditions.
 
 ---
 
@@ -26,29 +26,29 @@ Don't get discouraged! Machine learning is a challenging topic, but you're tackl
 
 Machine learning models are like athletes—they need the right training to perform at their best! Fine-tuning is the secret sauce that helps models make accurate predictions while avoiding overfitting. Here’s a breakdown of how to fine-tune different types of ML models like a pro!
 
-### 🎯 Feature Selection Models (PLS & LASSO)
+### Feature Selection Models (PLS & LASSO)
 
 - **PLS (Partial Least Squares):** Adjust the number of components to balance simplicity and accuracy.
 - **LASSO:** Tune the **alpha** value (regularization) to prevent overfitting while keeping important features.
 
-### 🌳 Tree-Based Models (XGBoost)
+### Tree-Based Models (XGBoost)
 
 - **Learning Rate (eta):** Controls how fast the model learns (too fast = chaos, too slow = forever training).
 - **Max Depth:** Determines how complex each decision tree can get—too deep means overfitting!
 - **Boosting Rounds:** More rounds = better learning, but at the cost of training time.
 
-### 🤖 Support Vector Regression (SVR)
+### Support Vector Regression (SVR)
 
 - **Kernel Type:** Decides how data is mapped (linear, polynomial, RBF, etc.).
 - **C Parameter:** Controls how much the model cares about errors.
 - **Epsilon & Gamma:** Adjust flexibility and margin of error.
 
-### 📈 Linear Models (ElasticNet & Bayesian Ridge)
+### Linear Models (ElasticNet & Bayesian Ridge)
 
 - **ElasticNet:** Fine-tune **l1_ratio** to mix L1 and L2 regularization (sparsity vs. stability).
 - **Bayesian Ridge:** Tweaking priors helps manage uncertainty and multicollinearity.
 
-### 💪 Optimizing Like a Pro
+## Optimizing Like a Pro
 
 - **Cross-validation:** Always check if your model works well on unseen data!
 - **Performance Metrics:** Use Mean Squared Error (MSE) or R-Squared to measure success.
@@ -60,6 +60,8 @@ Happy modeling!
 
 ## Leaderboard
 
+We recommend that the educator of your course makes a table like this, that everyone can access. From there, when a team goes to make a trait prediction and receives a score back from their model that they ran and created in the code, they can update it for the class to see and compare against!
+
 # 🏆 2025 Leaderboard 🏆
 
 | Rank | Team Name       | Score (R²) | Trait Predicted         | Last Updated |
@@ -70,6 +72,6 @@ Happy modeling!
 | 4️⃣   | Sorghum Squad   | 0.85       | Amylose Content         | 2025-01-27   |
 | 5️⃣   | The Overfitters | 0.80       | Starch Content          | 2025-01-26   |
 
-_The leaderboard will be updated at the end of the semester with your scores_
+_The leaderboard should be updated with your final scores at the end of the semester to declare a winner._
 
-🚀 Keep fine-tuning! Can you reach the top? 🔥
+Keep fine-tuning! Can you reach the top?
