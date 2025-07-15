@@ -157,7 +157,7 @@ If you find an issue with the project or need further assistance, feel free to r
 
 If you need to reach out to the administrators of the ARE program, please contact the following:
 
-- Email: [akass@danforthcenter.org](mailto:akass@danforthcenter.org)
+- Email: [ARE@danforthcenter.org](mailto:ARE@danforthcenter.org)
 
 We appreciate your feedback and will do our best to assist you promptly!
 
