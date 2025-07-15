@@ -74,7 +74,7 @@ We cannot stress enough that these geospatial tools are **instrumental** in disa
 
 Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
 
-#### Questions
+### Questions
 
 1. What is precision agriculture and what is another name for it?
 2. How do GIS and GPS contribute to precision agriculture?
@@ -87,7 +87,13 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 9. Why is it important to tailor agricultural practices to different zones within a field?
 10. How can geospatial tools help in responding to natural disasters like floods or wildfires?
 
-#### Answers
+{% callout title="You Should Know!" %}
+To view the answers to the quiz, you need to receive the password from your instructor. From there, click next to the word "**Password**" below, type in the password, and then click "**View Quiz Answers**".
+{% /callout %}
+
+### Answers
+
+{% passwordGate correct="sorghum1234" %}
 
 1. Precision agriculture is a farming method that uses technology to manage variability in fields, and it's also called site-specific crop management (SSCM).
 2. GIS and GPS provide detailed spatial data that helps farmers understand conditions in specific parts of a field to make more accurate decisions.
@@ -99,6 +105,8 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 8. Satellites, drones (UAVs), and environmental sensors.
 9. Because not every part of a field has the same soil, moisture, or nutrient levels—treating them differently increases efficiency.
 10. By modeling and evaluating risk zones, guiding emergency responses, and supporting long-term land-use planning.
+
+{% /passwordGate %}
 
 ---
 

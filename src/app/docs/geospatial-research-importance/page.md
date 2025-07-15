@@ -64,7 +64,7 @@ Please see below the resources that we used, to provide you the information abov
 
 Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
 
-#### Questions
+### Questions
 
 1. What is the main purpose of geospatial research?
 2. How does geospatial research help in urban planning and disaster management?
@@ -77,7 +77,13 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 9. Describe how geospatial tools contribute to environmental conservation.
 10. What is one reason why learning geospatial research skills can be valuable for your future?
 
-#### Answers
+{% callout title="You Should Know!" %}
+To view the answers to the quiz, you need to receive the password from your instructor. From there, click next to the word "**Password**" below, type in the password, and then click "**View Quiz Answers**".
+{% /callout %}
+
+### Answers
+
+{% passwordGate correct="sorghum1234" %}
 
 1. To understand spatial patterns and relationships, and to drive data-informed decision-making across various fields.
 2. It helps identify trends like population growth or flood-prone areas, which can guide infrastructure planning and emergency responses.
@@ -89,6 +95,8 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 8. It connects environmental, social, and economic data to help make well-rounded and informed decisions.
 9. By helping to identify wildlife habitats, track deforestation, and design protected areas.
 10. Because it is used in many real-world careers and decision-making roles, like disaster response, agriculture, and city planning.
+
+{% /passwordGate %}
 
 ---
 

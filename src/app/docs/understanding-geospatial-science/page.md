@@ -94,7 +94,7 @@ Please see below the resources that we used, to provide you the information abov
 
 Lets recap on the concepts you just read about, and see how much you learned! The answers can be found below, no peeking!
 
-#### Questions
+### Questions
 
 1. What is geospatial science the study of?
 2. What three types of information are combined in geospatial data?
@@ -107,7 +107,13 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 9. What is remote sensing, and how is it used in geospatial science?
 10. Why is it important to understand the difference between geospatial and traditional data when working with GIS?
 
-#### Answers
+{% callout title="You Should Know!" %}
+To view the answers to the quiz, you need to receive the password from your instructor. From there, click next to the word "**Password**" below, type in the password, and then click "**View Quiz Answers**".
+{% /callout %}
+
+### Answers
+
+{% passwordGate correct="sorghum1234" %}
 
 1. Geospatial science is the study of location-based data combined with analytical and technological tools like GIS and GPS.
 2. Location information, attribute data (about objects or events), and temporal data (when things happen).
@@ -119,6 +125,8 @@ Lets recap on the concepts you just read about, and see how much you learned! Th
 8. Urban planning, disaster management, agriculture, environmental monitoring, transportation.
 9. Remote sensing involves collecting data from satellites or aircraft to observe environmental changes over time.
 10. Because GIS tools rely on spatial context, and using non-spatial (traditional) data can lead to confusion or errors.
+
+{% /passwordGate %}
 
 ---
 
