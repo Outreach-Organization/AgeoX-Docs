@@ -54,7 +54,8 @@ export function Hero() {
                 planting conditions for sorghum using geospatial technology,
                 climate data, and predictive modeling.
               </p>
-              <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
+              {/* //! header buttons */}
+              {/* <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/">Get started</Button>
                 <Button
                   href="https://github.com/Outreach-Organization/AgeoX-Docs"
@@ -62,7 +63,7 @@ export function Hero() {
                 >
                   View on GitHub
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="relative lg:static xl:pl-10">
