@@ -1,5 +1,6 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import PasswordGate from '@/components/PasswordGate' // ← import your gate
 
 const tags = {
   callout: {
@@ -40,6 +41,19 @@ const tags = {
       description: { type: String },
       icon: { type: String },
       href: { type: String },
+    },
+  },
+
+  // ─── YOUR PASSWORD GATE TAG ───────────────────────────────────────────────────
+  passwordGate: {
+    // wrap whatever is inside with the PasswordGate component
+    render: PasswordGate,
+    attributes: {
+      correct: {
+        // the “password” prop name
+        type: String,
+        default: 'sorghum123', // change this default if you like
+      },
     },
   },
 }
