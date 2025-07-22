@@ -45,6 +45,8 @@ Please review the following key words for helping you to understand what some of
 
 With these key terms being defined should help your understanding of the ideas behind target traits picked for analysis.
 
+---
+
 ### Your Key Objective
 
 The objective of the machine learning activities is to **develop a model to predict a plant trait** (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain **modeling and machine learning skills**. Below are the instructions to help you accomplish these tasks.
@@ -164,11 +166,12 @@ You will choose one of these green-highlighted traits as your _**target trait**_
 
 The other traits in the dataset, such as **plant height**, **chlorophyll content**, or **leaf area**, will serve as your input features. These features are the information the model uses to make predictions about the target trait. The **better the quality** and **relevance** of your input features, the more accurate your model’s predictions will be.
 
-Before training your model, you’ll need to do some cleaning of the dataset! This means removing:
+Before training your model, you’ll need to do some cleaning of the dataset! This means that in the next steps coming up, we will be removing:
 
-- Non-numeric columns, like plant ID or notes
-- Irrelevant data, such as field layout info or metadata not useful for prediction
-- Your cleaned dataset should contain only numeric columns related to plant traits, one of which will be your target, and the rest will be your inputs.
+- **Non-numeric** columns, like `plant ID` or `notes`
+- **Irrelevant data**, such as field layout info or metadata not useful for prediction
+
+Your cleaned dataset should contain **only numeric columns** related to plant traits, one of which will be your **target**, and the rest will be your **inputs**.
 
 In summary, you will select **one trait** to predict (referred to as the “target”) from among the green-filled traits (e.g., Yield (Y), protein crude (PC), or quantum yield of PSII (PhiPS2)), while using other available traits as **input features**. Make sure to remove any non-numeric or irrelevant columns (like the field design columns mentioned above) before proceeding!
 
