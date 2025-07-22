@@ -353,7 +353,7 @@ Imagine trying to predict crop yield, weather, or even how a disease spreads —
 - Understand hidden relationships between many factors (like sunlight, water, nutrients)
 
 **What was the Model Doing?**
-A model takes data from input features (e.g., plant height, leaf color, temperature) and learns from these data to predict an outcome — such as grain nutritional quality (amylose, protein or starch content). Behind the scenes, the model is doing lots of math to find patterns and make the best possible guesses.
+A model takes data from input features (e.g., plant height) and learns from these data to predict an outcome — such as grain nutritional quality (amylose, protein or starch content). Behind the scenes, the model is doing lots of math to find patterns and make the best possible guesses.
 
 **How Do We Interpret the Model?**
 Once the model makes predictions, we compare the prediction data to actual data collected by the scientists in the field to see:
