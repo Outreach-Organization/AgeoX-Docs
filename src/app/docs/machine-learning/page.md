@@ -34,6 +34,17 @@ To support our research, our team also collects detailed data measurements from 
 
 The excel file `ARE_crop_data.xlsx` is organized with detailed crop data where each row **corresponds to a specific plot entry**. The columns filled in **red** represent elements related to the field design, such as Year, Plot ID, Genotype, Management Type (Mgmt), and Planting Date (PD)—providing structural and temporal context of the field trial. The columns filled in **green** represent potential target traits used for analysis, including phenotypic measurements like Plant Height (PH), Nutritional Content (e.g., LysP, SC, AMLS), and metabolite or digestibility indicators (e.g., MD_Lys, MD_CF). This color-coded structure allows for easy differentiation between **experimental setup** and **measurable outcomes**, which is essential for downstream analyses such as **Machine Learning-based trait prediction** or **genotype-performance evaluation**.
 
+Please review the following key words for helping you to understand what some of the different target traits mean, or where they are derived from:
+
+- **Plant height**: The vertical measurement of a plant from the base at soil level to the top of its highest point, often used as an indicator of growth and vigor.
+- **Biomass**: The total mass of living plant material, including stems, leaves, and roots, typically measured to assess growth and productivity, or yield.
+- **Photosynthesis**: Photosynthesis is the biological process by which green plants convert sunlight, carbon dioxide, and water into energy-rich sugars and oxygen. This light-driven conversion occurs primarily through chlorophyll pigments, which capture and absorb light energy. The efficiency of this process, especially within Photosystem II, is quantified by the quantum yield of PSII (ΦPSII or PhiPS2), which indicates the proportion of absorbed light effectively used in photochemical reactions. Chlorophyll content is thus a key factor influencing both light absorption and overall photosynthetic performance.
+- **Soil characteristics**: The physical, chemical, and biological properties of soil—such as texture, pH, moisture, and nutrient content—that influence plant growth.
+- **Grain quality**: The set of traits in harvested grain—including size, weight, nutritional content- such as crude protein, amylose, lysine, crude fat, and purity—that determine its market value and suitability for consumption or processing.
+- **Genotype-performance evaluation**: The assessment of how different plant genotypes perform under specific environmental or management conditions, often based on traits like yield, stress tolerance, and growth rate.
+
+With these key terms being defined should help your understanding of the ideas behind target traits picked for analysis.
+
 ### Your Key Objective
 
 The objective of the machine learning activities is to **develop a model to predict a plant trait** (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain **modeling and machine learning skills**. Below are the instructions to help you accomplish these tasks.
@@ -402,6 +413,12 @@ Want to learn more? Checkout these links here!
 
 **Identified Keywords**
 
+- Plant height
+- Biomass
+- Photosynthesis
+- Soil characteristics
+- Grain quality
+- Genotype-performance evaluation
 - Model
 - Modeling
 - Learning models
@@ -429,6 +446,18 @@ Want to learn more? Checkout these links here!
 ---
 
 **Definitions**
+
+- **Plant height**: The vertical measurement of a plant from the base at soil level to the top of its highest point, often used as an indicator of growth and vigor.
+
+- **Biomass**: The total mass of living plant material, including stems, leaves, and roots, typically measured to assess growth and productivity, or yield.
+
+- **Photosynthesis**: Photosynthesis is the biological process by which green plants convert sunlight, carbon dioxide, and water into energy-rich sugars and oxygen. This light-driven conversion occurs primarily through chlorophyll pigments, which capture and absorb light energy. The efficiency of this process, especially within Photosystem II, is quantified by the quantum yield of PSII (ΦPSII or PhiPS2), which indicates the proportion of absorbed light effectively used in photochemical reactions. Chlorophyll content is thus a key factor influencing both light absorption and overall photosynthetic performance.
+
+- **Soil characteristics**: The physical, chemical, and biological properties of soil—such as texture, pH, moisture, and nutrient content—that influence plant growth.
+
+- **Grain quality**: The set of traits in harvested grain—including size, weight, nutritional content- such as crude protein, amylose, lysine, crude fat, and purity—that determine its market value and suitability for consumption or processing.
+
+- **Genotype-performance evaluation**: The assessment of how different plant genotypes perform under specific environmental or management conditions, often based on traits like yield, stress tolerance, and growth rate.
 
 - **Model**: An abstract representation or mathematical function that maps input data to output predictions based on learned patterns from data.
 
