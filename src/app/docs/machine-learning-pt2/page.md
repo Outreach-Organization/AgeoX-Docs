@@ -153,6 +153,22 @@ All of these model's code allow you to replace the **selected trait**. Feel free
 - Lysine from grain (**LysG**)
 - Crude Protein (**CP**)
 
+```python
+   data = data.dropna(subset=['AMLS'])
+```
+
+or
+
+```python
+   data = data.dropna(subset=['LysG'])
+```
+
+or
+
+```python
+   data = data.dropna(subset=['CP'])
+```
+
 {% callout type="warning" title="Important!" %}
 Remember, we wrote `Y` and not "Yield" because even though Y = Yield, in our dataset file the column is strictly labeled as **Y** only! Make sure to insert `AMLS`, `LysG`, `CP`, or whatever else you choose.
 {% /callout %}
