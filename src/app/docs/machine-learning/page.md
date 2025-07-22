@@ -6,31 +6,55 @@ nextjs:
     description: Machine Learning Regression Models
 ---
 
-# Introduction
+# Introduction (Part 1)
 
-Welcome to **Module Two** of the project!
+Welcome to **Module Two** of the project! In this module, we will be doing a deep dive into a concept called **Machine Learning**. If you are familiar with concepts in computer science, this is a term you may have run into!
 
-To support our research, our team collects detailed data from the field. Our technicians use tools and machines to measure plant traits like **height**, **biomass** (how much plant material is produced), **photosynthesis activity**, **soil characteristics**, **grain quality**, and **weather conditions** such as temperature and rainfall. These measurements are **recorded regularly** throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what **you will be analyzing for this project!**
+## SECTION 1
+
+In this section, we will be breaking down why we are using machine learning, and what it is. You will get to meet the dataset and get the project set up!
+
+### Why Machine Learning? Meet the Data & Get Set Up
+
+> Big idea: We can teach a computer to predict important plant traits (like yield) by showing it examples of real field data.
+
+### Why Are We Doing This?
+
+Farmers and plant scientists collect lots of measurements, how tall plants grow, how much rain falls, and even how green the leaves are. If we feed those numbers into a computer, it can learn to guess a trait we care about (for example, how much grain the plant will produce). This is called _machine learning_.
+
+#### Real‑life example:
+
+> Think about learning to shoot basketball free throws. At first you miss a lot, but after each shot you adjust your form and get closer to the hoop. A computer does something similar: it looks at its “misses” (errors) and tweaks its “form” (the model) until its guesses improve!
+
+#### The Lab's Measurements
+
+To support our research, our team also collects detailed data measurements from the field! Our technicians use tools and machines to measure plant traits like **height**, **biomass** (how much plant material is produced), **photosynthesis activity**, **soil characteristics**, **grain quality**, and **weather conditions** such as temperature and rainfall. These measurements are **recorded regularly** throughout the growing season, from June to October, in every experimental field plot. All the collected values are organized and stored in an excel file, which is part of this project’s dataset, but also what **you will be analyzing for this project!**
 
 ![Lab member measuring the height of sorghum](/images/Machine_Learning/ML1.webp)
 
 The excel file `ARE_crop_data.xlsx` is organized with detailed crop data where each row **corresponds to a specific plot entry**. The columns filled in **red** represent elements related to the field design, such as Year, Plot ID, Genotype, Management Type (Mgmt), and Planting Date (PD)—providing structural and temporal context of the field trial. The columns filled in **green** represent potential target traits used for analysis, including phenotypic measurements like Plant Height (PH), Nutritional Content (e.g., LysP, SC, AMLS), and metabolite or digestibility indicators (e.g., MD_Lys, MD_CF). This color-coded structure allows for easy differentiation between **experimental setup** and **measurable outcomes**, which is essential for downstream analyses such as **Machine Learning-based trait prediction** or **genotype-performance evaluation**.
 
-The objective of this section is to **develop a model to predict a plant trait** (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain **modeling and machine learning skills**. Below are the instructions to help you accomplish these tasks.
+### Your Key Objective
+
+The objective of the machine learning activities is to **develop a model to predict a plant trait** (such as yield, seed protein content, chlorophyll a fluorescence, etc.) from diverse data collected by drone, physiological instruments, and technicians in the field, along with climate data. This will help you gain **modeling and machine learning skills**. Below are the instructions to help you accomplish these tasks.
 
 ![A sorghum leaf being measured for its traits ](/images/Machine_Learning/ML2.webp)
 
-## Before You Begin
+### Before You Begin
 
 In this module, we will be using the **Google Colab** online coding environment we created during the `Installation` steps. If you have not done these steps or need a refresher, please refer back to the [**Installation Guide**](/docs/installation) for details on setting up a Google Colab online environment.
 
-{% callout title="Remember!" %}
-This is a team effort! If a fellow classmate on your team needs time to revisit the installation steps, help guide them through the steps carefully, and pass along any tips and tricks you may have learned along the way.
+{% callout title="Instructor's Notes" %}
+**Timing**: The entirety of Part 1 fits in roughly 1 - 2 hours of lecture content, depending on how quickly students digest the material.
+
+**Tech Prep**: Ensure students have Google accounts; test Colab access beforehand.
+
+**Differentiation**: Provide a cleaned dataset in case students struggle with Excel.
 {% /callout %}
 
 ---
 
-## Setting Up Your Project
+### Setting Up Your Project
 
 ### Download Project Files
 
@@ -42,7 +66,52 @@ This is a team effort! If a fellow classmate on your team needs time to revisit 
 5. When prompted, select your file location of choice to place the files on your computer.
 6. You now have two downloaded files. In the `ARE_crop_data.xlsx` file, you will find the data collected throughout the field season. This is what will be our _dataset_. Within the `ARE_ML_code.ipynb` file, you are going to see 6 large code blocks. These blocks hold code for 6 different machine learning models, in which you are to use with the excel dataset file for analysis.
 
-## Machine Learning Models
+### Meet the Dataset
+
+We gave you an Excel file called `ARE_crop_data.xlsx`.
+
+**Each row** = one plot in the field.
+
+**Each column** = one piece of information we measured.
+
+| Column Color | What it means | Example columns                                  |
+| ------------ | ------------- | ------------------------------------------------ |
+| Red          | Field setup   | Year, Plot ID, Genotype                          |
+| Green        | Plant traits  | Plant Height (PH), Yield (Y), Protein Crude (PC) |
+
+{% callout title="Student Task" %}
+
+#### Student Task A: Explore
+
+_Open the spreadsheet and answer →_
+
+1. How many rows are there in total?
+
+2. Name a few green columns that look interesting to you.
+
+{% /callout %}
+
+{% callout title="Pause & Discuss" %}
+**Students:** Take 10 minutes to jot down:
+
+1. One reason scientists use machine learning.
+2. One green-column trait you might want to predict.
+
+**Teachers:** Quick check-for-understanding—call on a few pairs to share.
+
+- Any confusion about red vs. green columns?
+- Does everyone have both files downloaded?
+
+Give a thumbs up/sideways/down on: “I know what my dataset rows and columns represent.”
+{% /callout %}
+
+---
+
+## SECTION 2
+
+In this section, we will discuss picking your target traiting and cleaning your data to make it usable!
+
+### ML Model Overview
 
 As mentioned in the previous section, in the `ARE_ML_code.ipynb` file, you will see provided code that implements six regression models to **handle crop trait prediction**. Please see the following to see what these models are called, and a very high level summary of each of them:
 
@@ -55,15 +124,30 @@ As mentioned in the previous section, in the `ARE_ML_code.ipynb` file, you will 
 
 You will have access to each of these, so feel free to use any of them or implement additional models such as **Random Forest** or **Linear Regression**, depending on your preference and familiarity.
 
+Here is another way to view these models, in more simple terms:
+
+| Model          | One-line idea                                       | When it shines                               |
+| -------------- | --------------------------------------------------- | -------------------------------------------- |
+| PLS            | Combines many related features into simpler parts   | Tons of similar columns                      |
+| Lasso          | Shrinks useless features to zero                    | You suspect only a handful of columns matter |
+| ElasticNet     | Mix of Lasso + Ridge                                | Balanced approach                            |
+| Bayesian Ridge | Adds uncertainty estimates                          | Noisy data                                   |
+| XGBoost        | Many small decision trees that learn from mistakes  | Complex, non-linear patterns                 |
+| SVR            | Finds the best-fit line while ignoring small errors | Medium-sized datasets                        |
+
 {% callout title="You should know!" %}
 For this portion of the activity, we have provided _all_ of the code you will need, for you! No prior coding experience needed!
 {% /callout %}
 
 ---
 
-## Choosing Your Target Trait
+### Choosing Your Target Trait
 
 In machine learning, especially in **predictive modeling**, we try to predict something based on other pieces of information. That "something" we want to predict is called the **target trait** (also known as the target variable or label). In this project, the traits in your dataset are **measurable characteristics** of the plants—such as Yield (Y), Protein Crude (PC), or Quantum Yield of PSII (PhiPS2).
+
+#### Everyday Example:
+
+> Imagine you’re coaching your school’s track team. You want to predict an athlete’s 200‑meter sprint time (target trait) from other measurable facts, such as their 100‑meter time, vertical jump height, and average weekly training hours (input features). The computer would learn the relationship between those inputs and the sprint time, just like we’ll do with plant traits!
 
 You will choose one of these green-highlighted traits as your _**target trait**_. This is the outcome your model will try to predict. For example, if you choose "Yield (Y)" as your target, the **goal** of your machine learning model will be to **predict how much yield a plant will produce** based on the values of other traits.
 
@@ -82,6 +166,18 @@ In summary, you will select **one trait** to predict (referred to as the “targ
 - **Trait**: Any measurable characteristic of the plant.
 - **Target trait** (target variable): The trait you are trying to predict (e.g., Y, PC, or PhiPS2).
 - **Input features** (predictors): The traits used to help predict the target.
+
+{% callout title="Student Task" %}
+
+Student Task B: Brainstorm
+
+1. With the `ARE_crop_data.xlsx` file open, choose a possible target trait other than yield that a plant scientist might find useful (e.g. Protein Crude).
+
+2. Write down at least four input features you think could help predict it.
+
+3. For each feature, write one sentence explaining why it might influence the target trait (You may have to look some of them up using our glossary or the internet).
+
+{% /callout %}
 
 ---
 
@@ -107,6 +203,15 @@ Let us move on to preparing and cleaning the `ARE_crop_data.xlsx` dataset.
    ![Viewing file in Excel ](/images/Machine_Learning/MLExcel1.webp)
 3. With the file open, **discard the columns related to field design** such as **`PlotID`**, **`Genotype`**, **`Mgmt`**, and **`Planting Date (PD)`**.
    ![Discarding not needed columns ](/images/Machine_Learning/MLExcel2.webp)
+
+{% callout title="Student Task" %}
+
+Student Task C: Answering Question
+
+1. Why might keeping `PlotID` hurt the model?
+
+{% /callout %}
+
 4. With the columns deleted, this is now how your dataset should now look:
    ![Confirming how dataset now looks ](/images/Machine_Learning/MLExcel3.webp)
 5. Odds are, you dataset is already set to how we would like it, but in science it is always best to double check! **Select everything in your file** (_clicking the square in the top left of your data table_). While in the `Home` tab, find on the top menu the **Number Formatting dropdown**. Click on this, and scroll down to `General`. Select `General`, _even if it is already prepopulated in the dropdown_.
@@ -115,9 +220,26 @@ Let us move on to preparing and cleaning the `ARE_crop_data.xlsx` dataset.
    ![Confirming the dataset looks correct](/images/Machine_Learning/MLExcel5.webp)
 7. Make sure to now **save** your now updated file!
 
+{% callout title="Checkpoint & Questions" %}
+**Students:**
+
+- Circle your chosen **target trait** in your notes.
+- List 3–4 input features you kept, and why.
+- Show a partner the columns you deleted. Did you both delete the same ones?
+
+**Teachers:**
+
+- Ask: “Why is `PlotID` (or another ID column) a bad predictor?”
+- Quick poll: Who changed their mind about a target trait after cleaning?
+
+Take a short stretch/water break before we jump into setting up Google Colab.
+{% /callout %}
+
 ---
 
-## Moving to Google Colab
+## SECTION 3
+
+Welcome back! In this section, we will be breaking down the process of moving our code files and cleaned up data to **Google Colab**, an online code editor!
 
 ### Moving your files
 
@@ -161,112 +283,41 @@ Depending on your code editor, sometimes comments display as **green text**, and
 
 ---
 
-## Running the Models and Collecting Outputs
+#### Learning Checkpoint
 
-Alright so as a recap, at this point we now have our dataset cleaned, and your machine learning module and dataset **uploaded to Google Colab**. Lets start to run the code shall we!
+#### Pop Quiz 🚀
 
-1. Your dataset and model notebook should be **loaded into Google Colab** at this point.
-   ![Confirming the files are in Google Colab](/images/Machine_Learning/ML11.webp)
-2. Lets walk through the first model together! You should see the name of the first model at the very top, "**#Partial Least Square Regression model**". Notice above the rest of the code is the comments we talked about earlier (_a # followed by green text_). At the beginning of the code we are first importing in all of the required python libraries and dependencies needed to make our code work (e.g., `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `openpyxl`, etc.).
-   ![Showing where the import statements are in the code](/images/Machine_Learning/ML12.webp)
+1. **Multiple Choice**: Which file contains the code for the machine‑learning models?A. ARE_crop_data.xlsx B. ARE_ML_code.ipynb C. Geo_ml_project
 
-3. The next chunk of code is what will be allowing our `ARE_crop_data.xlsx` dataset file to be used in our notebook.
-   ![Showing the code that allows you to use the dataset](/images/Machine_Learning/ML13.webp)
+2. **True or False**: Genotype is a good input feature to keep for model training.
 
-4. _**This next code block is very important!**_ This is where you will be choosing your desired trait to analyze from the `ARE_crop_data.xlsx` dataset file.
+3. **Fill in the Blank**: In the spreadsheet, the color green marks \***\*\_\_\_\_\*\***.
 
-   ![Choosing your desired trait to analyze](/images/Machine_Learning/ML14.webp)
+4. **Multiple Choice**: You chose Protein Crude (PC) as your target trait. Which of the following would NOT be a helpful input feature?A. Plant Height B. Rainfall C. File Name
 
-5. Go back to the `ARE_crop_data.xlsx` dataset file, and choose a trait! We are going to choose `Yield(Y)`.
-   ![Choosing your desired trait to analyze, Yield](/images/Machine_Learning/ML15.webp)
+5. **Short Answer:** Why should non‑numeric columns be removed before training a regression model?
 
-6. Now since we chose the trait `Yield(Y)`, we are going to replace `target_trait`, with `Y`.
+#### Answers
 
-```python
-   data = data.dropna(subset=['target_trait'])
-```
+{% passwordGate correct="sorghum1234" %}
 
-To:
+**Answer 1**. B
 
-```python
-   data = data.dropna(subset=['Y'])
-```
+**Answer 2**. False – it is non‑numeric text.
 
-{% callout type="warning" title="Important!" %}
-We are writing `Y` and not "Yield" because even though the Y = Yield, in our dataset file the column is strictly labeled as **Y** only!
-{% /callout %}
-![Showing the excel table where we got the desired plant trait we want to analyze](/images/Machine_Learning/ML16.webp)
+**Answer 3**. plant traits / target traits
 
-7. You will now need to update all of the locations that say `target_trait` to `Y`.
-   ![Verifying all of the code spots are correctly filled with the selected trait](/images/Machine_Learning/ML17.webp)
-   {% callout type="warning" title="Important!" %}
-   You will have to do this step for each new model that you start to work on! Whenever you choose a trait, you will have to put that trait, and replace the `target_trait` spot in the code.
-   {% /callout %}
-8. And that is it! Since you have selected a trait to analyze, and let the code know which trait from the dataset you are looking to analyze, you are good to **run the code**! We will do this by finding the **Play** button at the top left of a code block, and selecting it.
-   ![Showing where the Play button is to run the code ](/images/Machine_Learning/ML18.webp)
+**Answer 4**. C – File Name is irrelevant and non‑numeric.
 
-If successfull, you should see a **green checkmark** next to the play button, and underneath the code:
+**Answer 5**. Models require numbers to calculate relationships; text columns would cause errors or meaningless results.
 
-- A **figure** showing the regression plot of the predicted vs. observed values.
-  ![Showing the final result ](/images/Machine_Learning/ML19.webp)
-
-Here is the breakdown of the **summary of each block of code** for a model (_this is the same information that is in the comments in the **green** text_):
-
-1. Loading your dataset into your chosen environment (Google Colab).
-2. Import the necessary libraries (e.g., pandas, numpy, scikit-learn, matplotlib, openpyxl, etc.).
-3. Loading and handling missing data.
-4. Spliting your dataset so that data from 2023 is used for training and data from 2024 is used for testing.
-5. Define features and target
-6. Transformation and scaling
-7. Train the models
-8. Prediction and evaluation
-9. Save the outputs
-
-Feel free to now try using the selected trait (`Y`), with the other models, or choose a different trait to analyze!
-
-{% callout title="You should know!" %}
-That everytime you run a code block, the figure that you see at the bottom of the code block, and an excel file with the **Observed** and **Predicted** results will be saved in the console on the left. If you do not see it, you may have to use the **refresh button**.
-![Showing the saved figures and results in the console ](/images/Machine_Learning/ML22.webp)
-![Showing the saved results in the console ](/images/Machine_Learning/ML23.webp)
-{% /callout %}
-
-## Understanding The Results
-
-Once you have finished running the code, the output of the exercise includes a **regression plot** illustrating the relationship between the **observed and predicted values** of the target trait, as well as an **Excel file containing detailed results**. This file includes:
-
-- The regression **performance** metrics
-- The **observed vs. predicted** values
-- The list of features selected by the model
-  The **observed vs. predicted values** compare the _actual measurements_ taken in 2024 against _the predictions generated by models trained on 2023 data_. This comparison provides a **direct evaluation** of how well the model generalized to new data.
-  The regression metrics, including **R² (coefficient of determination)** and **RMSE (root mean square error)**, quantify the model’s _predictive_ performance.
-  {% callout title="You should know!" %}
-  The **Predictions** and **Metrics** values can be found at the bottom of the excel sheet that is outputed to you, once you have ran the code blocks in the exercise.
-  ![Showing the excel file where the predictions vs metrics are at the bottom of the sheet ](/images/Machine_Learning/ML24.webp)
-  ![Showing the excel file where the the observed vs. predicted are at the bottom of the sheet ](/images/Machine_Learning/ML25.webp)
-  ![Showing the excel file where the the metrics are at the bottom of the sheet ](/images/Machine_Learning/ML26.webp)
-  {% /callout %}
-  These metrics are **key indicators** used in the competition to evaluate how **accurately each team’s model performed**.
-  Finally, the selected features represent the traits identified by the model as most important for predicting the target trait. These features offer valuable insights that can inform future model development and trait prediction strategies.
-
-## Tuning Your Models
-
-- Adjust model parameters and hyperparameters (e.g., learning rate, number of estimators, regularization strength, etc.) to **improve model accuracy**.
-- Use techniques such as **cross-validation**, **grid search**, or **randomized search** to systematically find better hyperparameter settings.
-- Compare metrics across different models to decide which approach works best for your data.
+{% /passwordGate %}
 
 ---
 
-## Wrap-Up
+## SECTION 4
 
-1. **Keep track of your final predictions**, figures, and metrics.
-2. **Document any changes** you make to model hyperparameters or the data preprocessing steps so you can reproduce or improve your results later.
-3. If you have any issues with your environment, **refer back to the Installation Guide** or ask for assistance.
-
-Happy modeling!
-
-## Learning Continued
-
-### Now You Know
+### Learning Continued
 
 At this point, you might be thinking...
 
@@ -318,9 +369,22 @@ This graph shows a good model output as R2 is a midpoint between 0 and 1 and the
 Take a minute to reflect on all of the information. We know it is a lot to take in at once! Machine Learning is not an easy concept, it takes a long time to understand well and become an expert at. If you are curious and eager to learn more, please see the links below to become an expert yourself!
 {% /callout %}
 
+If the above definitions are a bit much to digest at the moment, please see the table below that breaks the vocabulary down to simpler terms, and gives an everyday example:
+| Concept | What it Means | Everyday Example |
+| --------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Modeling | Building a simplified version of the real world so we can test ideas quickly. | A paper-airplane prototype lets you test wing shapes before building a real glider. |
+| Regression Model | A math recipe that links one or more inputs to a number you care about. | Using hours-studied to guess your math-test score. |
+| Why Use Models? | They help us predict, save time, and spot hidden patterns. | Weather apps predict rain so you know to grab an umbrella. |
+| What the Model Is Doing | It learns the relationship between inputs and the target from examples. | A computer learns how pizza size relates to price, then guesses the cost of a new pizza. |
+| Interpreting the Model | We compare its guesses to real data to judge quality. | If your step-counter app says you walked 9,950 steps but your watch shows 10,000, that’s pretty close—good model! |
+| R² (Coefficient of Determination) | Tells us what fraction of the real-world variation the model explains (0–1). | R² = 0.9 means 90 % of house-price differences are explained by size and location—great! |
+| RMSE (Root Mean Squared Error) | Average size of the model’s mistakes (lower = better). | An RMSE of 3 °F means a forecast is off by ~3 °F on average. |
+| Predictor Variables (Input Features) | The pieces of information the model uses. | Predicting fuel efficiency from car weight and engine size (but not paint color). |
+| Regression Plot | A scatterplot of Predicted vs. Actual values to visualize performance. | If dots for predicting class heights hug the diagonal line, your height-model rocks. |
+
 ---
 
-## Learning Resources
+### Learning Resources
 
 Want to learn more? Checkout these links here!
 
@@ -334,7 +398,7 @@ Want to learn more? Checkout these links here!
 
 ---
 
-## Glossary
+### Glossary
 
 **Identified Keywords**
 
@@ -414,3 +478,11 @@ Want to learn more? Checkout these links here!
 - **Accuracy metrics**: Quantitative measures (e.g., R², RMSE, MAE for regression; accuracy, precision, recall for classification) that evaluate a model’s performance against ground truth.
 
 - **Feature importance**: A ranking or score indicating how much each input feature contributes to the model’s predictions, often computed using methods like permutation importance, tree-based importance scores, or SHAP values.
+
+---
+
+## Next up
+
+In **Part 2**, we will begin running the model, understanding the results, and then finally tuning the model to achieve even more accurate results! If you wish to learn more, please continue to read through the **Learning Continued** section below. Once you are finished, head on over to the next part of the activity!
+
+---

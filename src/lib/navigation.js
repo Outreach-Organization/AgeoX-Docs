@@ -36,7 +36,8 @@ export const navigation = [
     title: 'Project',
     links: [
       { title: 'QGIS and Python', href: '/docs/heatmap-generation' },
-      { title: 'Machine learning', href: '/docs/machine-learning' },
+      { title: 'Machine Learning Pt. 1', href: '/docs/machine-learning' },
+      { title: 'Machine Learning Pt. 2', href: '/docs/machine-learning-pt2' },
       { title: 'TensorBoard', href: '/docs/tensor-board' },
       { title: 'Competition', href: '/docs/competition' },
       // { title: 'Testing', href: '/docs/testing' },
