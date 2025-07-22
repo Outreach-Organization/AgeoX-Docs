@@ -12,6 +12,15 @@ Welcome to the **third and final module** of the project! You have done great so
 
 The goal of this final task is to **design and implement** an educational framework that enhances your understanding of machine learning (ML) concepts in the context of GIS-based crop trait analysis. The framework employs a novel, visualization-driven approach using **TensorBoard** to provide real-time insights into key ML processes such as data preparation, model training, feature selection, and prediction evaluation. By integrating interactive visualization tools, this task aims to bridge the gap between theoretical knowledge and practical application, making complex ML processes intuitive and engaging.
 
+In basic terms, think of this final project as building a hands-on, visual toolkit that shows you exactly how machine learning works when you’re studying crop traits on a map. Instead of just reading about boring math, you’ll see live, colorful graphs (using TensorBoard) that update as you:
+
+- Clean and prep your data
+- Train your model
+- Pick which traits (features) matter most
+- Check how well your model’s predictions match reality
+
+By turning abstract ideas into interactive visuals, you’ll move from “just theory” to actually watching machine learning happen in real time—and have fun doing it!
+
 ---
 
 ## Introduction to TensorBoard
