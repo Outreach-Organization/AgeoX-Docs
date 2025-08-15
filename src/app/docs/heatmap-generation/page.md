@@ -16,6 +16,19 @@ This guide will walk you through setting up your environment, **creating heatmap
 
 ---
 
+## Why Heatmaps are Important
+
+Before we start, let us understand why we are creating a heatmap in this activity. Heatmaps turn data into _visual insights_! A heatmap is a useful way to visualize the **location** and **intensity** (or density) of data points. Our heatmap uses a gradient of colors, ranging from low (**Green**) to high, (**Red**) which represents a normalized extent of values tied to the individual data points. In our case, the locations and value of the data points are derived from the **location** and **output readings** of the installed soil sensors. A very specific example to get the point across would be the following:
+
+Example:
+
+> You have moisture data from a field, collected from sensors scattered across the field. You are asked to map this moisture data, so the farmer knows where the most wet portions of his field are.
+> After collecting your moisture data, analyzing it, and generating a heatmap, you see there is a large red section in the middle of your generated heatmap. You now would be able use your findings to show your farmer that he has a portion of his field that collects more water than the other parts of his field. You would now tell him to not plant a crop there that does not do well in standing water.
+
+Pretty cool huh! Lets move on to setting up the activity.
+
+---
+
 ## Setting Up Your Project
 
 ### Download Project Files
@@ -23,11 +36,19 @@ This guide will walk you through setting up your environment, **creating heatmap
 - Before you begin, download the project files located here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
 - Create a folder in a location you’ll remember and place all downloaded files, including the **Shapefile folder** (`plot_boundaries` files), in it.
 
+{% callout title="Tip for Instructors!" %}
+_The instructor(s) of the course, can downloaded the needed files for this activity [here](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3) if they wish to provide the students the needed code files beforehand._
+{% /callout %}
+
 ---
 
 ### Install Required Software
 
 #### **Install QGIS**
+
+{% callout title="Tip for Instructors!" %}
+_It is recommended that the instructor(s) of the course, downloads QGIS beforehand, to ensure that all students have adequate access to QGIS, and the same version of the software. If you are not able to, the following instructions can guide the students on the best practice for installation._
+{% /callout %}
 
 - Visit the [QGIS Download Page](https://qgis.org/download/) (if you have not done already).
 - Choose the **Long Term Release (3.34 LTR)** version.
@@ -55,14 +76,38 @@ This guide will walk you through setting up your environment, **creating heatmap
    ![Finding the Open Script button](/images/QGIS/QGIS3.webp)
 
 {% callout title="You should know!" %}
-Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3).
+Remember, the needed files were downloaded from the google drive folder previously provided to you here: [Project Files](https://drive.google.com/drive/folders/1tVPbNnlWsZem3CviXxUAObnSZgv9GWk3). You are looking for the `Section1: QGIS_and_Python` folder, where the needed files are located.
 {% /callout %}
 
-5. With the script opened, provide for string constants **_CSV_IN_**, **_SHP_IN_**, and **_PROJECT_OUT_** at lines 23, 24, and 25.
+5. With the script opened, provide for string constants **_CSV_IN_**, **_SHP_IN_**, and **_PROJECT_OUT_** at lines 23, 24, and 25. Each will have examples below them of how the path would look on either a Windows or Mac(Apple) computer.
 
-   - `CSV_IN`: Path to the `field_sensor_data.csv` file.
+   - `CSV_IN`: This is the path to the `field_sensor_data.csv` file.
+     - Windows:
+     ```bash
+     C:\Users\<Your*Username>\Downloads\Section1* QGIS*and_Python/field_sensor_data.csv
+     ```
+     - Mac:
+     ```bash
+     /Users/<Your_Username>/Downloads/Section1\* QGIS_and_Python/field_sensor_data.csv
+     ```
    - `SHP_IN`: Path to the `plot_boundaries.shp` file. Ensure this file is in the same folder as the other `plot_boundaries` files (_this is very important!_).
+     - Windows:
+     ```bash
+     C:\Users\<Your_Username>\Downloads\Section1_ QGIS_and_Python/Shapefile/plot_boundaries.shp
+     ```
+     - Mac:
+     ```bash
+     /Users/<Your_Username>/Downloads/Section1_ QGIS_and_Python/Shapefile/plot_boundaries.shp
+     ```
    - `PROJECT_OUT`: Output the path and filename for the generated QGIS project file (e.g., `/path/to/your/qgis_heatmap.qgs`), making sure to include the `.qgs` extension on the filename.
+     - Windows:
+     ```bash
+     C:\Users\<Your_Username>\path\to\output\qgis_heatmap.qgs
+     ```
+     - Mac:
+     ```bash
+     /Users/<Your_Username>/path/to/output/qgis_heatmap.qgs
+     ```
 
    {% callout type="warning" title="Important!" %}
    You can right-click a file in the Explorer tab and choose `Copy Path` to get its file path, to use in the above step. Paste this into the quotes for each.
@@ -80,7 +125,7 @@ Remember, the needed files were downloaded from the google drive folder previous
    CSV_IN = r"C:\Code\field_sensor_data.csv"
    ```
 
-6. Provide `date_start` and `date_end` for the date range you wish to view ( _see the commented section beginning at line 27_ ).
+6. Provide `date_start` and `date_end` for the date range you wish to view ( _see the commented section beginning at line 27_ ). A date range you may wish to work with could be: `2024-06-14 to 2024-12-28`.
 
    - OPTIONALLY: Instead of a range, provide a list of dates at line 36 variable '**dates**'.
 
@@ -91,6 +136,39 @@ Remember, the needed files were downloaded from the google drive folder previous
    ```
 
 7. Provide the column name for the `label_name` variable for the data you wish to view as a heatmap at line 39. This refers to the column/header names within the `field_sensor_data.csv` file.
+
+{% callout title="You should know!" %}
+For the `label_name`, you can find these in the .csv file mentioned previously. Please see below for all of the labels that can be used. **Only one can be used at a time though!**
+{% /callout %}
+
+The full list of sensor data label_names compatible with creating a heatmap:
+
+- Battery Voltage (mV)
+- Solar Voltage (mV)
+- USB Voltage (mV)
+- Atmospheric Pressure (kPa)
+- Air Temperature (°C)
+- Gas Resistance (kΩ)
+- Relative Humidity (%)
+- Illuminance (lux)
+- Soil Moisture 1 (VWC)
+- Soil Moisture 2 (VWC)
+- Calibrated Counts VWC 1
+- Calibrated Counts VWC 2
+- Electrical Conductivity 1 (mS/cm)
+- Electrical Conductivity 2 (mS/cm)
+- Soil Temperature 1 (°C)
+- Soil Temperature 2 (°C)
+- Soil Temperature 1 (F)
+- Soil Temperature 2 (F)
+
+{% callout type="warning" title="Important!" %}
+Please remember toenclose the trait you select in quotes (""):
+
+**Good**: “Soil Moisture 1 (VWC)”
+
+**Not Correct**: Soil Moisture 1 (VMC)
+{% /callout %}
 
 8. Click the `Run Script` at the top of the Python Editor to execute the script!
 
@@ -141,6 +219,24 @@ And that is it! Congrats on successfully creating your first map using real data
 
 ---
 
+So you have generated your heatmap, now what? You are probably thinking:
+
+> why was this important and how do I understand what the heatmap is telling me?
+
+Lets find out...
+
+### Analyzing the heatmap
+
+In QGIS, a "layer" represents data that you include in your QGIS Project. The data can take various forms, such as:
+
+- **Raster** (image)
+- **Vector** (points, lines, shapes)
+- **Mesh** (a grid of data points) layers
+
+In this case, the Google Satellite Layer is a tiled _Raster layer_ which pulls its image data from Google satellite photos. The **order of the layers** determines the order that items are _visually rendered to the screen_, one on top of the other. You can think of the list of layers like a **stack**, where the layer at the bottom is placed _first_, and the layer at top is placed _last_.
+
+---
+
 ## Saving Your Heatmap
 
 This next set of instructions is _technically optional_ for the time being, if you wanted to move on. **You will eventually have to do this step** in **Module Three** though, so we figured we may as well include the needed steps while you still have your QGIS program open!
@@ -176,10 +272,9 @@ Follow these steps in your **already openned QGIS program** to export your heatm
 ![Drawing a rectangle](/images/TensorBoard/TB5.webp)
 
 6. **Export as Image**
+
    - Go to `Layout` then select `Export as Image…`
    - Choose **PNG**, give it a filename (e.g., **Heatmap Layout.png**), and click `Save`.
-
-![Drawing a rectangle](/images/TensorBoard/TB6.webp)
 
 7. **Verify the PNG**
    - Locate and open **Heatmap Layout.png** to ensure it exported correctly.
@@ -194,25 +289,6 @@ Please remember where you saved your **Heatmap.png** file! If you forget, or los
 ---
 
 ## Learning Continued
-
-### Now You Know
-
-So you have generated and saved your heatmap, now what? You are probably thinking, why was this important and how are heatmaps relevant? Lets find out...
-
-### Analyzing the heatmap
-
-In QGIS, a "layer" represents data that you include in your QGIS Project. The data can take various forms, such as **Raster** (image), **Vector** (points, lines, shapes), and **Mesh** (a grid of data points) layers. In this case, the Google Satellite Layer is a _tiled Raster layer_ which pulls its image data from Google satellite photos. The order of the layers determines the order that items are visually rendered to the screen, one on top of the other. You can think of the list of layers like a stack, where the layer at the bottom is placed first, and the layer at top is placed last.
-
-### Why Heatmaps are Important
-
-Heatmaps turn data into visual insights! A heatmap is a useful way to visualize the location and intensity (or density) of data points. Our heatmap uses a gradient of colors, ranging from low (Green) to high, (Red) which represents a normalized extent of values tied to the individual data points. In our case, the locations and value of the data points are derived from the location and output readings of the installed soil sensors. A very specific example to get the point across would be the following:
-
-Example:
-
-> You have moisture data from a field, collected from sensors scattered across the field. You are asked to map this moisture data, so the farmer knows where the most wet portions of his field are.
-> After collecting your moisture data, analyzing it, and generating a heatmap, you see there is a large red section in the middle of your generated heatmap. You now would be able use your findings to show your farmer that he has a portion of his field that collects more water than the other parts of his field. You would now tell him to not plant a crop there that does not do well in standing water.
-
-Pretty cool huh!
 
 ### How Heatmaps and Machine Learning Relates
 

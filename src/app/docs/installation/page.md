@@ -16,6 +16,10 @@ This guide will walk you through the installation and setup process to ensure yo
 
 #### Install QGIS
 
+{% callout title="Tip for Instructors!" %}
+_It is recommended that the instructor(s) of the course, downloads QGIS beforehand, to ensure that all students have adequate access to QGIS, and the same version of the software. If you are not able to, the following instructions can guide the students on the best practice for installation._
+{% /callout %}
+
 - Visit the [QGIS Download Page](https://qgis.org/download/) (if you have not done already).
 - Choose the **Long Term Release (3.34 LTR)** version.
 - Select your operating system (Windows, macOS, or Linux) and follow the installation instructions.
@@ -41,6 +45,10 @@ Google Colab is popular because it **removes many common barriers to getting sta
 ### Accessing Google Colab
 
 Alright, lets get started firing up your very first Google Colab environment!
+
+{% callout type="warning" title="Important!" %}
+Students, please make sure to check with your instructor(s), that **Google Colab** and **Google Collab Practice** _are not already installed_ on the computers you are using!
+{% /callout %}
 
 1. First, you are going to want to open up your internet browser and type in https://colab.research.google.com or follow this link here: [Google Colab](https://colab.research.google.com).
 2. Sign in with your Google account (if you do not have one, go ahead and make one).
@@ -78,16 +86,23 @@ Lets test that your environment is working with some sample code!
    ![Connecting to a hosted runtime](/images/Intro/Installation/Installation5.webp)
 
    {% callout title="You should know!" %}
-   It may take a minute for the connection to be made, depending on how strong your wifi network signal is, and how many people are using the Colab service. It could be millions at a time!
+   A **hosted runtime** is a cloud-based environment managed by the service provider where your code automatically runs without you having to set up or maintain the underlying servers. It may take a minute for the connection to be made, depending on how strong your wifi network signal is, and how many people are using the Colab service. It could be millions at a time!
    {% /callout %}
 
 3. While it is loading, you should be seeing a message saying `Connecting...`.
 
    ![Connecting to a hosted runtime](/images/Intro/Installation/Installation6.webp)
 
-4. When the process is finished, and you are connected to a runtime, you should now see a **green checkmark** and the works `RAM` and `Disk`. These metrics are there to show you how labor intensive your code is to run in the online environment.
+4. When the process is finished, and you are connected to a runtime, you should now see a **green checkmark** and the words `RAM` and `Disk`.
 
-   ![Connecting to a hosted runtime](/images/Intro/Installation/Installation7.webp)
+   - **RAM** (_Random Access Memory_) shows how much “working memory” your program needs while it’s running.
+   - **Disk** shows how much “storage space” it uses to read/write files or save data.
+
+In simple terms, RAM temporarily holds the data your program is actively working with for quick access, while Disk provides longer-term storage for files and data even after your program stops.
+
+By watching these numbers you can tell at a glance whether your code is light and easy for the online system to handle, or if it’s using a lot of resources (which could make it slower or risk hitting limits).
+
+![Connecting to a hosted runtime](/images/Intro/Installation/Installation7.webp)
 
 In the world of coding, sometimes to run your workflow, you need to install something called **libraries**. Libraries are essentially a collection of pre-written code, typically **functions** or **classes**, that can be used in multiple programs. It provides a **reusable set of tools** for common tasks, saving developers time and effort by avoiding the need to reinvent the wheel. Lets try this!
 
