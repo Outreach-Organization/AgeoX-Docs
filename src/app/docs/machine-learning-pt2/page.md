@@ -253,6 +253,24 @@ Tuning a machine learning model is a pretty complex task, so here’s a more dow
 
 By thinking of **hyperparameters** as recipe tweaks, **cross-validation/grid-search** as taste-tests, and **metric comparison** as ranking your batches, you’ll see how tuning ML models is really just “finding the tastiest settings!
 
+### Submitting Your Results
+
+You have made it this far, and we want to see what you were able to come up with! At this point, as a reminder you should have:
+
+1. A regression plot
+
+   - The graph that showed your model’s predictions versus the actual measurements.
+
+2. The Excel file with two section tabs:
+
+- **Observed vs. Predicted values (_Predicted_ tab)**:
+  - A side-by-side list of the real measurements from 2024 and the numbers your model (**trained on 2023 data**) guessed.
+  - Model scores (R² and RMSE)
+
+3. Your notebook in which you have been working/changing the model's code in your Google Colab code editor.
+
+Consult with your instruction, and please submit your results through the Student Portal in the [Learning Management System](https://areportal.danforthcenter.org/Identity/Account/Login?ReturnUrl=%2F).
+
 ---
 
 #### Learning Checkpoint
@@ -364,7 +382,7 @@ A regression model is a type of statistical or machine learning model used to un
 **Why Use Models?**
 Imagine trying to predict crop yield, weather, or even how a disease spreads — it's too complex to guess! Modeling helps us:
 
-- Predict outcomes (like how a plant will grow based on soil or climate)
+- Predict outcomes
 - Save time and resources by running simulations
 - Understand hidden relationships between many factors (like sunlight, water, nutrients)
 

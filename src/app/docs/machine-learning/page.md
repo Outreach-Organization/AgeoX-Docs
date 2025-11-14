@@ -135,6 +135,10 @@ As mentioned in the previous section, in the `ARE_ML_code.ipynb` file, you will 
 - **Xtreme Gradient Boosting (XGBoost)**: Builds lots of small decision trees that learn from each other to make powerful predictions.
 - **Support Vector Regression (SVR)**: Tries to find a smooth line that fits the data while ignoring small errors, making it good for tricky patterns.
 
+{% callout title="You should know!" %}
+Regression is a way of finding a **pattern** in data so we can make **predictions**. Imagine you plot a bunch of points on a graph. Maybe each point shows how many hours a student studied and what score they earned. The points might not line up perfectly, but regression finds the **best-fitting line** (or curve) that goes through the “middle” of the points. Once we have that line, we can use it to **predict** what score someone might get if we know how many hours they study. In short: regression looks at past data, finds a trend, and uses that trend to make smart predictions.
+{% /callout %}
+
 You will have access to each of these, so feel free to use any of them or implement additional models such as **Random Forest** or **Linear Regression**, depending on your preference and familiarity.
 
 Here is another way to view these models, in more simple terms:
@@ -348,7 +352,7 @@ A regression model is a type of statistical or machine learning model used to un
 **Why Use Models?**
 Imagine trying to predict crop yield, weather, or even how a disease spreads — it's too complex to guess! Modeling helps us:
 
-- Predict outcomes (like how a plant will grow based on soil or climate)
+- Predict outcomes
 - Save time and resources by running simulations
 - Understand hidden relationships between many factors (like sunlight, water, nutrients)
 
