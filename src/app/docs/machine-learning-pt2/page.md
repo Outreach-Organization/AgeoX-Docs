@@ -257,11 +257,7 @@ By thinking of **hyperparameters** as recipe tweaks, **cross-validation/grid-sea
 
 You have made it this far, and we want to see what you were able to come up with! At this point, as a reminder you should have:
 
-1. A regression plot
-
-   - The graph that showed your model’s predictions versus the actual measurements.
-
-2. The Excel file with two section tabs:
+1. The Excel file with two section tabs:
 
 - **Observed vs. Predicted values (_Predicted_ tab)**:
   - A side-by-side list of the real measurements from 2024 and the numbers your model (**trained on 2023 data**) guessed.
