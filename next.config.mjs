@@ -5,7 +5,10 @@ import withSearch from './src/markdoc/search.mjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // ✅ THIS IS THE FIX
+
   pageExtensions: ['js', 'jsx', 'md', 'ts', 'tsx'],
+
   webpack(config) {
     config.resolve.alias['@'] = path.resolve(process.cwd(), 'src')
     return config
